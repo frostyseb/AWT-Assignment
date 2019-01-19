@@ -1,5 +1,8 @@
 <?php
 
+/*
+* Contain db information
+*/
 $dbServername = "localhost";
 $dbusername ="root";
 $dbpassword = "";

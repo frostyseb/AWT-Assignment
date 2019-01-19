@@ -3,11 +3,13 @@
 session_start();
 	include_once 'dbh_dbh.inc.php';
 
+	//Get username and password from form
 	$uid = mysqli_real_escape_string($conn,$_POST["username"]);
 	$pwd = mysqli_real_escape_string($conn,$_POST["password"]);
 
 	if(empty($uid) || empty($pwd))
 	{
+		//Run no input
 		header("Location: ../login.php?login=empty");
 		exit();
 	}
@@ -19,6 +21,7 @@ session_start();
 
 		if($resultCheck < 1)
 		{
+			//run no result in database
 			header("Location: ../login.php?login=error");
 			exit();
 		}
@@ -46,10 +49,12 @@ session_start();
 					$_SESSION['u_ic'] = $row['ic_number'];
 
 					$_SESSION['u_high'] = $row['high_score'];
+					//only run login successful
 					header("Location: ../dashboard.php?login=success");
 					exit();
 					break;
 				default:
+					//only run not successful
 					header("Location: ../login.php?login=error");
 					exit();
 					break;
