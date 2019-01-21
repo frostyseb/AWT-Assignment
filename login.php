@@ -1,3 +1,9 @@
+<?php 
+	require_once "config.php";
+
+	$loginURL = $gClient->createAuthUrl();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +16,7 @@
 	  <!-- Font -->
 	  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:400,800" />
 	<!-- Font awesome bootstrap-->
-	<link rel="stylesheet" href="vendor\font-awesome\css\font-awesome.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<!-- Bootstrap CSS and JS-->
 	<link rel="stylesheet" href="vendor/node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="vendor/node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -24,8 +30,8 @@
 				<form>
 					<input placeholder="Email..." name = "email" class="form-control"><br>
 					<input type = "password" placeholder="Password..." name = "password" class="form-control"><br><br>
-					<input type="Submit" value = "Log In" class = "btn btn-primary">
-					<input type="Button" value="Log In with Google" class="btn btn-danger">
+					<input type="Submit" value = "Log In" class = "btn btn-outline-primary btn-block">
+					<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
 				</form>
 			</div>
 		</div>
