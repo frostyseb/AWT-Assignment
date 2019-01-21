@@ -115,6 +115,11 @@
 							<td>Gender</td>
 							<td><?php echo $_SESSION['gender']?></td>
 						</tr>
+						<tr>"
+							<td><form action="logout.php" class="form-inline pull-xs-right" style="margin-top:1rem;" method="POST" id="logoutF">
+                    <a id="loginBtn" class="btn btn-success" href="#" onclick="document.getElementById('logoutF').submit();"><i class="fa fa-sign-out fa-lg fa-fw"></i>Logout</a>
+                </form></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
