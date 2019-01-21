@@ -12,9 +12,9 @@
         header('Location: login.php');
         exit();
     }
-    
 
     $oAuth = new Google_Service_Oauth2($gClient);
+    //Get user profile data from google
 	$userData = $oAuth->userinfo_v2_me->get();
 
 	echo "<pre>";
