@@ -4,6 +4,9 @@
 /*
 Testing
 */
+html{
+	min-height:100%;
+}
 
 body {
     background-image: url("../assets/bgimg.jpg");
@@ -43,6 +46,13 @@ body {
     .form_box .cca_photos {
         width: 100%;
     }
+}
+
+@media (max-width: 1024px) {
+    body, html{
+		overflow:hidden;
+		
+	}
 }
 
 #login_title {
