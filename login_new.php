@@ -16,7 +16,7 @@
 	
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 		<!--CSS Stylesheet-->
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="src\css\styles.css">
 	
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -25,10 +25,10 @@
 <body>
 	
 	<div class="form_box">
-		<img src="quest_logo.png">
+		<img src="src\assets\quest_logo.png">
 		<h2 id="login_title">Quest International University Perak<br>CCA Portal</h2>
 		<p id="login_descp">Login now to discover upcoming CCA events & activities</p>
-		<img src="photos.png" class="col-xs-12 cca_photos"><br>
+		<img src="src\assets\photos.png" class="col-xs-12 cca_photos"><br>
 		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
 
 	</div>

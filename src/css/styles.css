@@ -1,7 +1,7 @@
 /*CSS Styling*/
 
 body {
-    background-image: url("bgimg.jpg");
+    background-image: url("../assets/bgimg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

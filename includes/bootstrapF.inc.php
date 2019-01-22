@@ -1,4 +1,4 @@
-<body>
+
     	<!--jQuery first, then Bootstrap JS. -->
 	  <!--Load the CDN first-->
 	  <script src="http://code.jquery.com/jquery-3.3.1.min.js" 
@@ -12,4 +12,3 @@
 
     <!-- Load jQuery --> 
 	<!--<script src="vendor/node_modules/initjQuery.js"></script>-->
-</body>
