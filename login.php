@@ -19,14 +19,15 @@
 		<link rel="stylesheet" href="src\css\styles.css">
 	
 	<!--Google font style-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
 </head>
 
 <body>
 	
 	<div class="form_box">
 		<a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>
-		<h2 id="login_title">Quest International University Perak<br>CCA Portal</h2>
+		<h1 id="login_title">Quest International University Perak</h1>
+		<h2 id="login_portal">CCA Portal</h2>
 		<p class="form_element">Login now to discover upcoming CCA events & activities</p>
 		<img src="src\assets\photos.png" class="col-xs-12 cca_photos"><br><br>
 		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
@@ -35,7 +36,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".form_box").fadeIn(1500)
+			$(".form_box").fadeIn(1500);
 		});
 
 	</script>

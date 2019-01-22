@@ -32,8 +32,8 @@ body {
 }
 
 .form_box .cca_photos {
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
 }
 
 @media only screen and (max-width: 844px) {
@@ -56,4 +56,8 @@ body {
 
 #login_title {
     font-family: 'Roboto Slab', serif;
+}
+
+#login_portal {
+	font-family: 'Dosis', serif;
 }
