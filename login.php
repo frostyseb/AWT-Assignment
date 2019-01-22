@@ -27,11 +27,18 @@
 	<div class="form_box">
 		<img src="src\assets\quest_logo.png">
 		<h2 id="login_title">Quest International University Perak<br>CCA Portal</h2>
-		<p id="login_descp">Login now to discover upcoming CCA events & activities</p>
-		<img src="src\assets\photos.png" class="col-xs-12 cca_photos"><br>
+		<p class="form_element">Login now to discover upcoming CCA events & activities</p>
+		<img src="src\assets\photos.png" class="col-xs-12 cca_photos"><br><br>
 		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
+	</div> <!-- END form_box -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".form_box").fadeIn(1500)
+		});
 
-	</div>
+	</script>
 	
 </body>
 <?php include 'includes/bootstrapF.inc.php'; ?>

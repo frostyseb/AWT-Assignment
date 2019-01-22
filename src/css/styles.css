@@ -24,6 +24,11 @@ body {
     border-radius: 0.5em;
     margin-top: 100px;
     margin-bottom: 100px;
+	display:none;
+}
+
+.form_element {
+	opacity:0;
 }
 
 .form_box .cca_photos {
