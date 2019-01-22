@@ -49,13 +49,6 @@ body {
     }
 }
 
-@media (max-width: 1024px) {
-    body, html{
-		overflow:hidden;
-		
-	}
-}
-
 #login_title {
     font-family: 'Roboto Slab', serif;
 }
