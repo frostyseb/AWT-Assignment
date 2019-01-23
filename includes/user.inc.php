@@ -47,11 +47,15 @@
 
             if(!empty($userDataArray)){
                 //Check the data is in the database or not
-                $prevQuery = "SELECT * FROM" . $this->tableName.
+               /* $prevQuery = "SELECT * FROM" . $this->tableName.
                 "WHERE oauth_provider = '" . $userDataArray['oauth_provider']. "'".
-                "AND oauth_uid = '" . $userDataArray['oauth_uid'] . "'";
+                "AND oauth_uid = '" . $userDataArray['oauth_uid'] . "'";*/
+
+                $oProvider_oUid = "SELECT * FROM" .$this->tableName. "WHERE 
+                oauth_provider = '" . $oProvider . "'" .
+                "AND oauth_uid ='" .$oUid ."'";
                 
-                $stmt = $this->connect()->query($prevQuery);
+                $stmt = $this->connect()->query($oProvider_oUid);
                 if($stmt->rowCount()){
                     echo "There is data";
                 }
