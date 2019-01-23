@@ -8,7 +8,7 @@ class Dbh{
     private $charset;
     private $tableName;
 
-    private function __construct(){
+    private function setData(){
         $this->serverName = "localhost";
         $this->userName ="root";
         $this->password = "";
@@ -17,7 +17,7 @@ class Dbh{
     }
 
     protected function connect(){
-        
+        setData();
         try{
             //dsn = data source name
             $dsn = "mysql:host=" . $this->serverName . ";dbname=" . $this->dbName .

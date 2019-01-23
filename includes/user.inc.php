@@ -1,6 +1,9 @@
 <?php
 
-    class Users extends Dbh{
+    include_once 'includes/Dbh.inc.php';
+    include_once 'includes/user.ins.php';
+
+    class User extends Dbh{
 
         public function getAllUsers () {
         
@@ -14,7 +17,7 @@
         }
 
         public function getData($sql){
-            $stmt = 
+            
         }
 
         public function getUsersWithCountCheck() {
