@@ -26,10 +26,10 @@
 
 	//Insert or update user data to the database
     $userDataArray = array(
-        'oauth_provider'=> 'google',
-        'oauth_uid'     => $userData['id'],
-        'first_name'    => $userData['givenName'],
-        'last_name'     => $userData['familyName'],
+        'oProvider'=> 'google',
+        'oUid'     => $userData['id'],
+        'fName'    => $userData['givenName'],
+        'lName'     => $userData['familyName'],
         'email'         => $userData['email'],
         'gender'        => $userData['gender'],
         'locale'        => $userData['locale'],
