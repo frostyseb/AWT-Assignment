@@ -1,0 +1,63 @@
+/*CSS Styling*/
+
+
+/*
+Testing
+*/
+html{
+	min-height:100%;
+}
+
+body {
+    background-image: url("../assets/bgimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form_box {
+    margin: auto;
+    padding: 1em;
+    opacity: 0.7;
+    background-color: #fff;
+    width: 50%;
+    text-align: center;
+    border-radius: 0.5em;
+    margin-top: 100px;
+    margin-bottom: 100px;
+	display:none;
+}
+
+.form_element {
+	opacity:0;
+}
+
+.form_box .cca_photos {
+    width: 600px;
+    height: 300px;
+}
+
+@media only screen and (max-width: 844px) {
+    .form_box {
+        width: 70%;
+    }
+    .form_box .cca_photos {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 644px) {
+    .form_box {
+        width: 80%;
+    }
+    .form_box .cca_photos {
+        width: 100%;
+    }
+}
+
+#login_title {
+    font-family: 'Roboto Slab', serif;
+}
+
+#login_portal {
+	font-family: 'Dosis', serif;
+}
