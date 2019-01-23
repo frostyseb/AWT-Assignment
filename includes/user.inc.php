@@ -13,6 +13,10 @@
             }
         }
 
+        public function getData($sql){
+            $stmt = 
+        }
+
         public function getUsersWithCountCheck() {
             $id = 2;
             $uid ="uid2";
@@ -32,6 +36,12 @@
         }
 
         public function checkUser($userDataArray = array()){
-            if(!empty($userDataArray))
+            if(!empty($userDataArray)){
+                //Check the data is in the database or not
+                $prevQuery = "SELECT * FROM " .
+                "WHERE oauth_provider = ' " . $userDataArray['oauth_provider']. "'
+                AND oauth_uid = ' " . $userDataArray['oauth_uid'] . "'";
+
+            }
         }
     }

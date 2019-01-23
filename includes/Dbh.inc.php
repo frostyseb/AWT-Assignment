@@ -6,13 +6,13 @@ class Dbh{
     private $password;
     private $dbName;
     private $charset;
+    private $tableName;
 
     private function __construct(){
         $this->serverName = "localhost";
         $this->userName ="root";
         $this->password = "";
         $this->dbName = "users";
-
         $this->charset = "utf8mb4";
     }
 
