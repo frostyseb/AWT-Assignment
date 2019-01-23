@@ -1,5 +1,7 @@
 <?php
     require_once "config.php";
+    include_once 'includes/Dbh.inc.php';
+    include_once 'includes/user.inc.php';
 
     if(isset($_SESSION['access_token']))
         $gClient->setAccessToken($_SESSION['access_token']);
@@ -25,27 +27,26 @@
 	//Insert or update user data to the database
     $userDataArray = array(
         'oauth_provider'=> 'google',
-        'oauth_uid'     => $gpUserProfile['id'],
-        'first_name'    => $gpUserProfile['given_name'],
-        'last_name'     => $gpUserProfile['family_name'],
-        'email'         => $gpUserProfile['email'],
-        'gender'        => $gpUserProfile['gender'],
-        'locale'        => $gpUserProfile['locale'],
-        'picture'       => $gpUserProfile['picture'],
-        'link'          => $gpUserProfile['link']
+        'oauth_uid'     => $userData['id'],
+        'first_name'    => $userData['givenName'],
+        'last_name'     => $userData['familyName'],
+        'email'         => $userData['email'],
+        'gender'        => $userData['gender'],
+        'locale'        => $userData['locale'],
+        'picture'       => $userData['picture']
     );
 
-    $user = new Users();
+    $user = new User;
     $finalUserData = $user->checkUser($userDataArray);
     
-   /* $_SESSION['id'] = $userData['id'];
+    $_SESSION['id'] = $userData['id'];
     $_SESSION['email'] = $userData['email'];
     $_SESSION['gender'] = $userData['gender'];
     $_SESSION['picture'] = $userData['picture'];
     $_SESSION['familyName'] = $userData['familyName'];
-    $_SESSION['givenName'] = $userData['givenName'];*/
+    $_SESSION['givenName'] = $userData['givenName'];
 
-    //header('Location: index.php');
+  //  header('Location: index.php');
     //exit();
 
 ?>

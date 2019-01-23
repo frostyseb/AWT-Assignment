@@ -1,6 +1,6 @@
 <?php
 
-    class Users extends Dbh{
+    class User extends Dbh{
 
         public function getAllUsers () {
         
@@ -11,10 +11,6 @@
                 $uid = $row['uid'];
                 return $uid;
             }
-        }
-
-        public function getData($sql){
-            $stmt = 
         }
 
         public function getUsersWithCountCheck() {
@@ -41,6 +37,14 @@
                 $prevQuery = "SELECT * FROM " .
                 "WHERE oauth_provider = ' " . $userDataArray['oauth_provider']. "'
                 AND oauth_uid = ' " . $userDataArray['oauth_uid'] . "'";
+                
+                $stmt = $this->connect()->query($sql);
+                if($stmt->num_rows > 0){
+                    echo "There is data";
+                }
+                else{
+                    echo "No data in database";
+                }
 
             }
         }
