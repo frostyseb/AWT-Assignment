@@ -1,8 +1,5 @@
 <?php
 
-    include_once 'includes/Dbh.inc.php';
-    include_once 'includes/user.ins.php';
-
     class User extends Dbh{
 
         public function getAllUsers () {
