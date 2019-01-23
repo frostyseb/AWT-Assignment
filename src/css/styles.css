@@ -4,8 +4,9 @@
 /*
 Testing
 */
-html{
-	min-height:100%;
+
+html {
+    min-height: 100%;
 }
 
 body {
@@ -24,16 +25,25 @@ body {
     border-radius: 0.5em;
     margin-top: 100px;
     margin-bottom: 100px;
-	display:none;
+    display: none;
 }
 
 .form_element {
-	opacity:0;
+    opacity: 0;
 }
 
 .form_box .cca_photos {
     width: 600px;
     height: 300px;
+}
+
+@media only screen and (max-width:1232px) {
+    .form_box {
+        width: 60%;
+    }
+    .cca_photos {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 844px) {
@@ -59,5 +69,5 @@ body {
 }
 
 #login_portal {
-	font-family: 'Dosis', serif;
+    font-family: 'Dosis', serif;
 }
