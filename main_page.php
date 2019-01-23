@@ -16,12 +16,40 @@
 	
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="jquery.marquee.js"></script>
+  <script src="jquery.pause.js"></script>
+  <script src="jquery.easing.min.js"></script>-->
 	
 </head>
 
 <body>
-
+<!--<div id = "header">
+<h1><p><a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>QIUP CCA</p></h1>
+<div class='marquee'>Testing marquee</div>
+<script>
+  $(function(){
+    $('.marquee').marquee();   
+  });
+</script>
+<script>
+$(function(){
+  $('.marquee').marquee({
+    allowCss3Support: true,
+    css3easing: 'linear',
+    easing:'linear',
+    delayBeforeStart: 1000,
+    direction:'left',
+    duplicated: false,
+    duration: 5000,
+    gap: 20,
+    pauseOnCycle: false,
+    pauseOnHover:false,
+    startVisible:false
+  });
+});
+</script>
+</div>-->
 	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
