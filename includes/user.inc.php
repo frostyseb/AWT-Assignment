@@ -13,10 +13,6 @@
             }
         }
 
-        public function getData($sql){
-            
-        }
-
         public function getUsersWithCountCheck() {
             $id = 2;
             $uid ="uid2";
@@ -41,6 +37,14 @@
                 $prevQuery = "SELECT * FROM " .
                 "WHERE oauth_provider = ' " . $userDataArray['oauth_provider']. "'
                 AND oauth_uid = ' " . $userDataArray['oauth_uid'] . "'";
+                
+                $stmt = $this->connect()->query($sql);
+                if($stmt->num_rows > 0){
+                    echo "There is data";
+                }
+                else{
+                    echo "No data in database";
+                }
 
             }
         }

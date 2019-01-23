@@ -1,34 +1,35 @@
 <?php
 
-class Dbh{
-    private $serverName;
-    private $userName;
+class Dbh {
+    private $servername;
+    private $username;
     private $password;
-    private $dbName;
+    private $dbname;
     private $charset;
-    private $tableName;
 
-    private function setData(){
-        $this->serverName = "localhost";
-        $this->userName ="root";
+    public function connect () {
+        $this->servername = "localhost";
+        $this->username = "root";
         $this->password = "";
-        $this->dbName = "users";
-        $this->charset = "utf8mb4";
-    }
+        $this->dbname = "users";
 
-    protected function connect(){
-        setData();
-        try{
+        $this->charset = 'utf8mb4';
+
+        try {
+
             //dsn = data source name
-            $dsn = "mysql:host=" . $this->serverName . ";dbname=" . $this->dbName .
-            ";charset=" . $this->charset;
+            $dsn = "mysql:host=". $this->servername. ";dbname=" . $this->dbname. ";charset=" . $this->charset;
+            $pdo = new PDO ($dsn, $this->username, $this->password);
 
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
             return $pdo;
-        }catch(PDOException $e){
-            echo "Connection failed: " . $e->getMessage();
+            
+        } catch (PDOException $e) {
+            echo "Connection failed: ". $e->getMessage();
         }
-    }
+        
 
+    }
 }
+
