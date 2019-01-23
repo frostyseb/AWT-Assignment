@@ -5,39 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
 	<title>QIUP CCA Portal</title>
+	
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 	<?php include 'includes/bootstrapF.inc.php'; ?>
-
-	
 	
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
+	
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 	
 </head>
 
 <body>
 
-	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	
-	<style>
-		.container { margin: 150px auto; }
-	</style>
-	
-	
 	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
 	  </ol>
 	  <div class="carousel-inner">
-		<div class="carousel-item active carousel-item-left">
+		<div class="carousel-item active">
 		  <img class="d-block w-100" src="src/assets/pic1.png" alt="First slide">
 		</div>
-		<div class="carousel-item carousel-item-next carousel-item-left">
+		<div class="carousel-item">
 		  <img class="d-block w-100" src="src/assets/pic2.png" alt="Second slide">
 		</div>
 		<div class="carousel-item">
@@ -95,6 +90,7 @@
 	<div id="ig"></div>-->
 
 </body>
+
 
 
 </html>
