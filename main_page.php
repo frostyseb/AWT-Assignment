@@ -8,14 +8,17 @@
 	
 	<title>QIUP CCA Portal</title>
 	
+	<!--Bootstrap js-->
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 	
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
 	
+	<!--Bootstrap CSS for slideshow-->
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="jquery.marquee.js"></script>
   <script src="jquery.pause.js"></script>
@@ -24,32 +27,33 @@
 </head>
 
 <body>
-<!--<div id = "header">
-<h1><p><a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>QIUP CCA</p></h1>
-<div class='marquee'>Testing marquee</div>
-<script>
-  $(function(){
-    $('.marquee').marquee();   
-  });
-</script>
-<script>
-$(function(){
-  $('.marquee').marquee({
-    allowCss3Support: true,
-    css3easing: 'linear',
-    easing:'linear',
-    delayBeforeStart: 1000,
-    direction:'left',
-    duplicated: false,
-    duration: 5000,
-    gap: 20,
-    pauseOnCycle: false,
-    pauseOnHover:false,
-    startVisible:false
-  });
-});
-</script>
-</div>-->
+	<!--<div id = "header">
+	<h1><p><a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>QIUP CCA</p></h1>
+	<div class='marquee'>Testing marquee</div>
+	<script>
+	  $(function(){
+		$('.marquee').marquee();   
+	  });
+	</script>
+	<script>
+	$(function(){
+	  $('.marquee').marquee({
+		allowCss3Support: true,
+		css3easing: 'linear',
+		easing:'linear',
+		delayBeforeStart: 1000,
+		direction:'left',
+		duplicated: false,
+		duration: 5000,
+		gap: 20,
+		pauseOnCycle: false,
+		pauseOnHover:false,
+		startVisible:false
+	  });
+	});
+	</script>
+	</div>-->
+
 	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -59,14 +63,14 @@ $(function(){
 	  <div class="carousel-inner">
 		<div class="carousel-item active">
 		  <img class="d-block w-100" src="src/assets/pic1.png" alt="First slide">
-		</div>
+		</div> <!-- END carousel-item active -->
 		<div class="carousel-item">
 		  <img class="d-block w-100" src="src/assets/pic2.png" alt="Second slide">
-		</div>
+		</div> <!-- END carousel-item -->
 		<div class="carousel-item">
 		  <img class="d-block w-100" src="src/assets/pic3.jpg" alt="Third slide">
-		</div>
-	  </div>
+		</div> <!-- END carousel-item -->
+	  </div> <!-- END carousel-inner -->
 	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		<span class="sr-only">Previous</span>
@@ -75,18 +79,17 @@ $(function(){
 		<span class="carousel-control-next-icon" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	  </a>
-	</div>
+	</div> <!-- END carouselExampleIndicators -->
 	
-	
+	<!--Bootstrap js for slideshow-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="Touch-Swipe-Bootstrap-Carousel/dist/bootstrap-swipe-carousel.js"></script>
-	
+
 	<script>
 		const carouselEl = $('.my-carousel');
 
-		// Bootstrap carousel needs to be loaded first
 		carouselEl.carousel().swipeCarousel({
 		  sensitivity: 'high' // low, medium or high
 		});
