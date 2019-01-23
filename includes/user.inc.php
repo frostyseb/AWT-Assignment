@@ -38,22 +38,21 @@
         //Set the user data array when checkUser() called
         public function setUserDataArray($array = array()){
             $this->userDataArray = $array;
-            separateFromArray();
+            $this->separateFromArray();
         }
 
         //Entry point
         public function checkUser($usdArray = array()){
-            setUserDataArray($usdArray);
-
-            if(!empty($userDataArray)){
+            if(!empty($usdArray)){
+                $this->setUserDataArray($usdArray);
                 //Check the data is in the database or not
                /* $prevQuery = "SELECT * FROM" . $this->tableName.
                 "WHERE oauth_provider = '" . $userDataArray['oauth_provider']. "'".
                 "AND oauth_uid = '" . $userDataArray['oauth_uid'] . "'";*/
 
                 $oProvider_oUid = "SELECT * FROM" .$this->tableName. "WHERE 
-                oauth_provider = '" . $oProvider . "'" .
-                "AND oauth_uid ='" .$oUid ."'";
+                oauth_provider = '" . $this->oProvider . "'" .
+                "AND oauth_uid ='" .$this->oUid ."'";
                 
                 $stmt = $this->connect()->query($oProvider_oUid);
                 if($stmt->rowCount()){
