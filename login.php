@@ -26,6 +26,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
 </head>
 
+<?php include 'simpleNav.php';?>
+
 <body>
 	
 	<div class="form_box">
