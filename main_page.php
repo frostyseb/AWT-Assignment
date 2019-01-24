@@ -19,45 +19,20 @@
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-	
-	<!--Word Suggestion-->
-	<script>
-		$(document).ready(function(){
-			$(".hintButton").click(
-			function(){
-				console.log("clicked");
-				$("#inputTxt").value = $this.data("suggest");
-			});
-		});
-	</script>
-	
-	<script>
-		function displayHint(str) {
-			if (str.length == 0) { 
-				document.getElementById("hintText").innerHTML = "";
-				return;
-			} 
-			else {
-				var xmlhttp = new XMLHttpRequest();
-				xmlhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						document.getElementById("hintText").innerHTML = this.responseText;
-					}
-				};
-				xmlhttp.open("GET", "getHint.php?q=" + str, true);
-				xmlhttp.send();
-			}
-		}
-	</script>
 </head>
 <?php include 'simpleNav.php';?>
 <body>
 	<div id = "header">
-	<h1><p><a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>QIUP CCA</p></h1>
-	<div class='m' style="outline:2px solid black;width:auto;margin-left:10px;margin-right:10px;"><marquee scrollamount="10">! ! WELCOME TO THE QIUP CCA WEBSITE ! !</marquee></div>
+		<h1><p><a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>QIUP CCA</p></h1>
+		<div class='m' style="outline:2px solid black;width:auto;margin-left:10px;margin-right:10px;">
+			<marquee scrollamount="10">! ! WELCOME TO THE QIUP CCA WEBSITE ! !</marquee>
+		</div>
 	</div>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<br>
+	
+	<br>
+	
 	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -91,19 +66,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="Touch-Swipe-Bootstrap-Carousel/dist/bootstrap-swipe-carousel.js"></script>
 	<?php include 'includes/bootstrapF.inc.php'; ?>
-	<script>
-		const carouselEl = $('.my-carousel');
-
-		carouselEl.carousel().swipeCarousel({
-		  sensitivity: 'high' // low, medium or high
-		});
-	</script>
 	
-	<form> 
-		<input type="text" onkeyup="displayHint(this.value)" placeholder="Search..." id="inputTxt">
-	</form>
-	<p>Suggestions: <span id="hintText"></span></p>
-
 </body>
 
 

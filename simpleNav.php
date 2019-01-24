@@ -1,3 +1,5 @@
+<script src="suggest.js"></script>
+
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="main_page.php">CCA QIUP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,8 +65,9 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" id="inputTxt" type="text" placeholder="Search clubs or societies" aria-label="Search" onkeyup="displayHint(this.value)">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	  <span id="hintText"></span>
     </form>
   </div>
 </nav>
