@@ -22,13 +22,13 @@
 	
 	<!--Word Suggestion-->
 	<script>
-		function addTxt(hintButton){
-			var suggest = hintButton.getAttribute("data-suggest");
-			
-			document.getElementById("inputTxt").value = suggest;
-			
-			console.log(suggest);
-		}
+		$(document).ready(function(){
+			$(".hintButton").click(
+			function(){
+				console.log("clicked");
+				$("#inputTxt").value = $this.data("suggest");
+			});
+		});
 	</script>
 	
 	<script>
@@ -99,30 +99,10 @@
 		});
 	</script>
 	
-	<!--<script>
-		function loadDoc(){
-			var xhttp;
-			if(window.XMLHttpRequest){
-				xhttp = new XMLHttpRequest(); 
-			}
-			else{				
-				xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-		
-			
-			xhttp.onreadystatechange = function(){	
-				if(xhttp.readyState == 4 && xhttp.status == 200)			
-				{
-					document.getElementById("ig").innerHTML = this.responseText;
-				}	
-			}
-			
-			xhttp.open("GET", "//api.instagram.com/v1/users/2093101329/media/recent/?access_token=2093101329.0e4abd3.d017a21b3e6e45408126e42cf0940d79", true);	
-			xhttp.send();	
-		}
-	</script>
-	
-	<div id="ig"></div>-->
+	<form> 
+		<input type="text" onkeyup="displayHint(this.value)" placeholder="Search..." id="inputTxt">
+	</form>
+	<p>Suggestions: <span id="hintText"></span></p>
 
 </body>
 

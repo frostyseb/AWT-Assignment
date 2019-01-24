@@ -36,10 +36,10 @@ if ($q !== "") {
         if (stristr($q, substr($name, 0, $len))) {
             if ($hint === "") {
                 $hint = $name;
-				echo "<button onclick='addTxt(this)' data-suggest='" . $hint . "' class='hintButton'>" . $hint . "</button>";
+				echo "<button data-suggest='" . $hint . "' class='hintButton'>" . $hint . "</button>";
             } 
 			else {
-				echo "<button onclick='addTxt(this)' data-suggest='" . $name . "' class='hintButton'>" . $name . "</button>";
+				echo "<button data-suggest='" . $name . "' class='hintButton'>" . $name . "</button>";
                 
             }
         }
