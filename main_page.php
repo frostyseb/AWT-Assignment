@@ -86,6 +86,11 @@
 	</script>
 	</div>-->
 
+	<form> 
+		<input type="text" onkeyup="displayHint(this.value)" placeholder="Search..." id="inputTxt">
+	</form>
+	<p>Suggestions: <span id="hintText"></span></p>
+	
 	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -126,12 +131,6 @@
 		  sensitivity: 'high' // low, medium or high
 		});
 	</script>
-		
-	<form> 
-		<input type="text" onkeyup="displayHint(this.value)" placeholder="Search..." id="inputTxt">
-	</form>
-	<p>Suggestions: <span id="hintText"></span></p>
-
 	
 	<!--<script>
 		function loadDoc(){
