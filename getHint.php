@@ -17,15 +17,13 @@ if ($q !== "") {
         if (stristr($q, substr($name, 0, $len))) {
             if ($hint === "") {
                 $hint = $name;
-				echo "<button data-suggest='" . $hint . "' class='hintButton'>" . $hint . "</button>";
             } 
 			else {
-				echo "<button data-suggest='" . $name . "' class='hintButton'>" . $name . "</button>";
-                
+				$hint .= ", $name";      
             }
         }
 	
     }
 }
-
+echo $hint === "" ? "no suggestion" : $hint;
 ?>

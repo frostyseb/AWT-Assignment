@@ -15,9 +15,4 @@ function displayHint(str) {
 	}
 }
 
-$(document).ready(function(){
-	$(".hintButton").click(function(){
-		console.log("clicked");
-		$("#inputTxt").value = $this.data("suggest").value;
-	});
-});
+

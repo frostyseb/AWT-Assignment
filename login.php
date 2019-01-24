@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="tiles-transitions-slider/example/octagon.css">
 	
 	<!--CSS Stylesheet-->
-	<link rel="stylesheet" href="src\css\styles.css">
+	<link rel="stylesheet" href="src\css\styles_login.css" type="text/css">
 	
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
