@@ -49,14 +49,6 @@
 			}
 		}
 	</script>
-	
-	
-	
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="jquery.marquee.js"></script>
-	<script src="jquery.pause.js"></script>
-	<script src="jquery.easing.min.js"></script>-->
-	
 </head>
 
 <body>
