@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="vendor/node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="vendor/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </head>
-
+<?php include 'simpleNav.php';?>
 <body>
 	<div class="container" style ="margin-top:100px;">
 		<div class="row">
