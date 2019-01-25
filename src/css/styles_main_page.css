@@ -22,9 +22,11 @@ input[type=text] {
   background-color: #f1f1f1;
   width: 100%;
 }
-input[type=submit] {
+#searchBtn {
   background-color: DodgerBlue;
   color: #fff;
+  padding:10px;
+  border:1px solid DodgerBlue;
 }
 .autocompleteItems {
   display:block;

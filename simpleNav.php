@@ -66,7 +66,7 @@
 		<div class="autocomplete" style="width:300px;">
 			<input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)">
 		</div>
-		<input type="submit">
+		<button type="submit" id="searchBtn"><i class="fa fa-search"></i></button>
 		<div id="hintText"></div>
 	</form>
 	
