@@ -16,10 +16,10 @@ if ($q !== "") {
         if (stristr($q, substr($name, 0, $len))) {
             if ($hint === "") {
                 $hint = $name;
-				echo "<button type='button' onclick='addTxt(this)' data-suggest='" . $hint . "' class='autocompleteItems'>" . $hint . "</button><br>";
+				echo "<button type='button' onclick='addTxt(this)' data-suggest='" . $hint . "' class='autocompleteItems'>" . $hint . "</button>";
             } 
 			else {
-				echo "<button type='button' onclick='addTxt(this)' data-suggest='" . $name . "' class='autocompleteItems'>" . $name . "</button><br>";    
+				echo "<button type='button' onclick='addTxt(this)' data-suggest='" . $name . "' class='autocompleteItems'>" . $name . "</button>";    
             }
         }
 	

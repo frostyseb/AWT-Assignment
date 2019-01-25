@@ -26,8 +26,15 @@ input[type=submit] {
   background-color: DodgerBlue;
   color: #fff;
 }
-.autocomplete-items {
+.autocompleteItems {
   display:block;
+  border:none;
+  position:relative;
+  padding:1em;
+  background-color:#D1D1D1;
+  cursor:pointer;
+  width:80%;
+  
 }
 
 .autocomplete-items div:hover {
