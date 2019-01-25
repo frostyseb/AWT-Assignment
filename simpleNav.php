@@ -62,10 +62,16 @@
         </a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" id="inputTxt" type="text" placeholder="Search clubs or societies" aria-label="Search" onkeyup="displayHint(this.value)">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> <br><br>	  
-    </form>
+	<form autocomplete="off">
+		<div class="autocomplete" style="width:300px;">
+			<input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)">
+		</div>
+		<input type="submit">
+		<div id="hintText"></div>
+	</form>
+	
+	<script src="suggest.js"></script>
+	
   </div>
 </nav>
 
@@ -187,11 +193,3 @@
 
 </style>
   
-<script>
-$(".navbar-toggler-icon").click(
-  alert("clicked");
-    function(){
-      $(".navbar-collapse").toggle(300);
-    }
-  )
-</script>

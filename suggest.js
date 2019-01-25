@@ -1,3 +1,9 @@
+function addTxt(autocompleteItems){
+	var suggest = autocompleteItems.getAttribute("data-suggest");
+	document.getElementById("myInput").value = suggest;
+}
+
+
 function displayHint(str) {
 	if (str.length == 0) { 
 		document.getElementById("hintText").innerHTML = "";
@@ -14,5 +20,8 @@ function displayHint(str) {
 		xmlhttp.send();
 	}
 }
+
+
+
 
 

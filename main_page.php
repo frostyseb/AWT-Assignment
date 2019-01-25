@@ -19,10 +19,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 	<!--CSS Stylesheet-->
-	<link rel="stylesheet" href="src/assets/styles_main_page.css" type="text/css">
+	<link rel="stylesheet" href="src/css/styles_main_page.css" type="text/css">
 	
 </head>
 <?php include 'simpleNav.php';?>
+<script src="suggest.js"></script>
 <body>
 	<div id = "header">
 		<div class='m'>
