@@ -38,29 +38,97 @@
 					<tbody>
 						<tr>
 							<td>ID</td>
-							<td><?php echo $_SESSION['id']?></td>
+							<td class = "table-col">
+								<div class="info">
+									<?php echo $_SESSION['id']?>
+									<i class='fa fa-lg fa-fw'></i>
+								</div>
+
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="id" id ="id">
+									<div class="input-group-append">
+										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
+									</div>
+								</div>
+
+							</td>
 						</tr>
 						<tr>
 							<td>First Name</td>
-							<td><?php echo $_SESSION['givenName']?></td>
+							<td class =  "table-col">
+								<div class="info">
+									<?php echo $_SESSION['givenName']?>
+									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
+								</div>
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="givenName" id ="givenName">
+									<div class="input-group-append">
+										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
+									</div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td>Last Name</td>
-							<td><?php echo $_SESSION['familyName']?></td>
+							<td class = "table-col">
+								<div class="info">
+									<?php echo $_SESSION['familyName']?>
+									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
+								</div>
+
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="familyName" id ="familyName">
+									<div class="input-group-append">
+										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
+									</div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td>Email</td>
-							<td><?php echo $_SESSION['email']?></td>
+							<td class = "table-col">
+								<div class="info">
+									<?php echo $_SESSION['email']?>
+									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
+								</div>
+								
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="email" id ="email">
+									<div class="input-group-append">
+										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
+									</div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td>Gender</td>
-							<td><?php echo $_SESSION['gender']?></td>
+							<td class = "table-col">
+								<div class="info">
+									<?php echo $_SESSION['gender']?>
+									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
+								</div>
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="gender" id ="gender">
+									<div class="input-group-append">
+										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
+									</div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td></td>
-							<td><form action="logout.php" class="form-inline pull-xs-right" style="margin-top:1rem;" method="POST" id="logoutF">
-                    <a id="loginBtn" class="btn btn-success" href="#" onclick="document.getElementById('logoutF').submit();"><i class="fa fa-sign-out fa-lg fa-fw"></i>Logout</a>
-                </form></td>
+							<td>
+								<form action="logout.php" class="form-inline pull-xs-right" style="" method="POST" id="logoutF">
+                    				<a id="logoutBtn" class="btn btn-success" href="#" 
+									onclick="document.getElementById('logoutF').submit();">
+									<i class="fa fa-sign-out fa-lg fa-fw" id ="logout-fa"></i><div id ="logoutBtn-value" style ="Display:inline;">Logout</div></a>
+               					 </form>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -71,19 +139,12 @@
 
 <body>
 	
-	<!--jQuery first, then Bootstrap JS. -->
-	  <!--Load the CDN first-->
-	  <script src="http://code.jquery.com/jquery-3.3.1.min.js" 
-	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
-	  crossorigin="anonymous"></script>
-	  <!-- If CDN failed to load, serve up the local version -->
-	  <script>
-	  	window.jQuery || 
-	  	document.write('<script src="vendor/node_modules/jquery/dist/jquery.js"><\/script>')
-	  </script>
-
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="src/js/dashboard.js"></script>
     <!-- Load jQuery --> 
 	<!--<script src="vendor/node_modules/initjQuery.js"></script>-->
+	<!-- script for edit the form -->
+	
 
 </body>
 </html>
