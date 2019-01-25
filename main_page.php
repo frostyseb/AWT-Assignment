@@ -21,6 +21,12 @@
 	<!--CSS Stylesheet-->
 	<link rel="stylesheet" href="src/css/styles_main_page.css" type="text/css">
 	
+	<!--Facebook API-->
+	<script src="API/FacebookAPI/fbAjax.js"></script>
+	<?php include 'API/FacebookAPI/facebook_feed.php'; ?>
+	<?php include 'API/FacebookAPI/facebook_feed_next.php'; ?>
+	<?php include 'API/FacebookAPI/facebook_functions.php'; ?>
+	
 </head>
 <?php include 'simpleNav.php';?>
 <script src="suggest.js"></script>
@@ -67,6 +73,29 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="Touch-Swipe-Bootstrap-Carousel/dist/bootstrap-swipe-carousel.js"></script>
+	
+	
+	<div id="facebook_feed">
+		<h3>The Latest</h3>
+
+		<div class="sk-cube-grid">
+		  <div class="sk-cube sk-cube1"></div>
+		  <div class="sk-cube sk-cube2"></div>
+		  <div class="sk-cube sk-cube3"></div>
+		  <div class="sk-cube sk-cube4"></div>
+		  <div class="sk-cube sk-cube5"></div>
+		  <div class="sk-cube sk-cube6"></div>
+		  <div class="sk-cube sk-cube7"></div>
+		  <div class="sk-cube sk-cube8"></div>
+		  <div class="sk-cube sk-cube9"></div>
+		</div> <!-- END sk-cube-grid -->
+
+		<div id="ajax_response">
+		</div> <!-- END ajax_response -->
+
+	</div> <!-- END facebook_feed -->
+	
+	
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 	
 </body>

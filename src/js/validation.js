@@ -1,6 +1,6 @@
 function validation(){
 	var regExp = /^(?=.*\d)$/;
-	var text = document.form.clubs.value;
+	var text = document.searchForm.clubs;
 	
 	if(text == ""){
 		alert("Search box cannot be empty.");

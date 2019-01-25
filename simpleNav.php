@@ -64,7 +64,7 @@
         </a>
       </li>
     </ul>
-	<form autocomplete="off" onsubmit="return validation()" method="post">
+	<form autocomplete="off" onsubmit="return validation()" method="post" name="searchForm">
 		<div class="autocomplete" style="width:300px;">
 			<input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)" required> 
 		</div>
