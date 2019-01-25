@@ -12,23 +12,21 @@
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 
 	<!--Google font style-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis|Indie+Flower" rel="stylesheet">
 	
 	<!--Bootstrap CSS for slideshow-->
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 	<!--CSS Stylesheet-->
-	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 	<link rel="stylesheet" href="src/assets/styles_main_page.css" type="text/css">
 	
 </head>
 <?php include 'simpleNav.php';?>
 <body>
 	<div id = "header">
-	<br>
 		<div class='m'>
-			<marquee scrollamount="10"><p>! ! WELCOME TO THE QIUP CCA WEBSITE ! !</p></marquee>
+			<font face="Indie Flower"><marquee scrollamount="10">! ! WELCOME TO THE QIUP CCA WEBSITE ! !</marquee></font>
 		</div>
 	</div>
 	
@@ -50,7 +48,7 @@
 		  <img class="d-block w-100" src="src/assets/pic2.png" alt="Second slide">
 		</div> <!-- END carousel-item -->
 		<div class="carousel-item">
-		  <img class="d-block w-100" src="src/assets/pic3.jpg" alt="Third slide">
+		  <img class="d-block w-100" src="src/assets/pic3.png" alt="Third slide">
 		</div> <!-- END carousel-item -->
 	  </div> <!-- END carousel-inner -->
 	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

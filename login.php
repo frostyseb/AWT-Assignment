@@ -37,9 +37,11 @@
 		<p class="form_element">Login now to discover upcoming CCA events & activities</p>
 		
 		<div class="octagon" id="octagon">
-			<img src="src/assets/pic1.png">
-			<img src="src/assets/pic2.png">
-			<img src="src/assets/pic3.jpg">
+			<img src="src/assets/hex1.png">
+			<img src="src/assets/hex2.jpg">
+			<img src="src/assets/hex3.png">
+			<img src="src/assets/hex4.png">
+			<img src="src/assets/hex5.jpg">
 		</div>
 		
 		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
