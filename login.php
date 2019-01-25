@@ -1,4 +1,8 @@
 <?php 
+
+	if(isset($_SESSION['id'])){
+		header('Location: logout.php');
+	}
 	require_once "config.php";
 // comment
 	$loginURL = $gClient->createAuthUrl();
