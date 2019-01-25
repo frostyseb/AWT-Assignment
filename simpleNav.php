@@ -1,3 +1,5 @@
+<script src="src/js/validation.js"></script>
+
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
   <a href="http://www.qiup.edu.my" target="_blank"><img src="src/assets/quest_logo.png" width="80em" height="80em"></a><a class="navbar-brand" href="main_page.php">CCA QIUP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,9 +64,9 @@
         </a>
       </li>
     </ul>
-	<form autocomplete="off">
+	<form autocomplete="off" onsubmit="return validation()" method="post">
 		<div class="autocomplete" style="width:300px;">
-			<input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)">
+			<input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)" required> 
 		</div>
 		<button type="submit" id="searchBtn"><i class="fa fa-search"></i></button>
 		<div id="hintText"></div>
@@ -192,4 +194,13 @@
 }
 
 </style>
-  
+ 
+ 
+<script>
+$(".navbar-toggler-icon").click(
+  alert("clicked"),
+  function(){
+      $(".navbar-collapse").toggle(300);
+  }
+ )
+</script>
