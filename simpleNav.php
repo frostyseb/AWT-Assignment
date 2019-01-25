@@ -70,7 +70,7 @@
 		<div id="hintText"></div>
 	</form>
 	
-	<script src="suggest.js"></script>
+	<script src="src/js/suggest.js"></script>
 	
   </div>
 </nav>
