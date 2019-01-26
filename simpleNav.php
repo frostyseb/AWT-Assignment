@@ -230,6 +230,7 @@ input[type=text] {
   cursor:pointer;
   width:100%;
   border-bottom:1px solid #A2A2A2;
+  z-index:999;
 }
 
 #hintText{
