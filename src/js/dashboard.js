@@ -1,3 +1,6 @@
+/*
+ * Initialize constant
+ */
 let hideTime = 600;
 let showTime = 600;
 let toggleTime = 300;
@@ -8,6 +11,9 @@ var $regexid = /^(\d{3,16})$/;
 var $regxemail = /^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/;
 var $regxgender = /^(?:m|M|male|Male|f|F|female|Female|FEMALE|MALE)$/;
 
+/*
+ * Copy the info in the division where class is info to the input:text(hidden input text field);
+ */
 function copyToInput() {
     var inputGroup = $(".table-col").find("input:text");
     inputGroup.each(
@@ -20,6 +26,11 @@ function copyToInput() {
     console.log("copyToInput run!");
 }
 
+
+/*
+ * Initialize the page
+ * Hide all the input field and hide the navigation bar, initialize the <i></i> (font-awesome)
+ */
 $(document).ready(
     function() {
         copyToInput();
@@ -28,6 +39,13 @@ $(document).ready(
         $(".info").children("i").removeClass("fa-pencil-square-o");
     }
 )
+
+/* Update the data to the server when update button clicked
+ * Data validation by using regular expression
+ * Determine the regular expression and errorMessage base on the attribute name
+ * Execute the regular expression
+ * Submit the form 
+ */
 
 $(".btn-update").click(
     function() {
@@ -75,6 +93,9 @@ $(".btn-update").click(
     }
 )
 
+/*
+ * Showed edit icon when the mouse is hover on the info tabs
+ */
 $(".info").hover(
     function() {
         $(this).children("i").css("color", "red");
@@ -86,6 +107,9 @@ $(".info").hover(
     }
 )
 
+/*
+ * Hide the input field when cancel button is clicked
+ */
 $(".cancelBtn").click(
     function() {
         var info = $(this).parents(".table-col").children(".info");
@@ -97,6 +121,9 @@ $(".cancelBtn").click(
     }
 )
 
+/*
+ * Pop up the hidden input field when clicked
+ */
 $(".info").click(
     function() {
         var infoValue = $.trim($(this).text());
@@ -116,6 +143,9 @@ $(".info").click(
     }
 )
 
+/*
+ * Allow the responsive navbar toggle according to the time decided 
+ */
 $(".navbar-toggler-icon").click(
     function() {
         $(".navbar-collapse").toggle(toggleTime);
