@@ -39,7 +39,7 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
-	<br>
+	<h3>Previous Events</h3>
 	
 	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
