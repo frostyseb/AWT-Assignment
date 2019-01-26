@@ -5,6 +5,10 @@
 	margin-bottom:0;
 }
 
+.ev {
+	font-family: 'Special Elite', cursive;
+}
+
 .fbAPI {
 	width:50%;
 	font-family: 'Comfortaa', cursive;
@@ -23,7 +27,9 @@
 }
 
 #news {
-	width: auto; height: 300px; background-color: lightblue;
+	width: auto; 
+	height: 300px; 
+	background-color: lightblue;
 }
   
 #news-item {
@@ -31,11 +37,14 @@
 }
 
 .list-item {
-	padding: 5px 5px 5px 5px;
+	padding: 1em;
 	width: 60%;
 	height: 20%;
 	background-color: dodgerblue;
 	font-family: 'Roboto Slab', serif;
+	text-align:center;
+	border-bottom:1px solid lightskyblue;
+	cursor:pointer;
 }
 
 .list-item:hover{

@@ -12,7 +12,7 @@
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 
 	<!--Google font style-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis|Indie+Flower|Comfortaa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Indie+Flower|Comfortaa|Special+Elite" rel="stylesheet">
 	
 	<!--Bootstrap CSS for slideshow-->
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	<h3>News & Updates</h3>
+	<br>
+	<h3 class="ev">News & Updates</h3>
 
 	<!--News Carousel-->
 	<div id="news" class="carousel slide my-carousel" data-ride="carousel">
@@ -83,7 +84,8 @@
 	</a>
 	</div> <!-- END carousel -->
 
-	<h3>Recent Events</h3>
+	<br><br>
+	<h3 class="ev">Recent Events</h3>
 
 	<!-- Events Carousel -->
 	<div id="events" class="carousel slide my-carousel" data-ride="carousel">
@@ -129,7 +131,7 @@
 	<div class="fbAPI">
 		<br>
 		<h4>Check out the latest CCA activities or <br>events from  <i class="fa fa-facebook-square" style="color:darkblue;"></i> QIUP Facebook!</h4>
-		<div class="fb-page" data-href="https://www.facebook.com/QuestInternationalUniversityPerak/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+		<div class="fb-page" data-href="https://www.facebook.com/QuestInternationalUniversityPerak/" data-tabs="timeline" data-width="500" data-height="1270" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
 			<blockquote cite="https://www.facebook.com/QuestInternationalUniversityPerak/" class="fb-xfbml-parse-ignore">
 				<a href="https://www.facebook.com/QuestInternationalUniversityPerak/">Quest International University Perak (QIUP)</a>
 			</blockquote>
@@ -138,7 +140,7 @@
 	
 	<br>
 	<?php
-	echo "<h4>Clubs & Societies</h4>";
+	echo "<div class='clubSoc'><h4 class='ev'>Clubs & Societies</h4>";
 	
 	$xml = simplexml_load_file("clubs_societies.xml") or die("Error: Cannot create object");
 	
@@ -148,7 +150,7 @@
 		echo "<div class='list-item'><b>" . $name . "</b></div>";
 	}
 	
-	echo "</div>";
+	echo "</div></div>";
 	?>
 
 	<script>
@@ -157,14 +159,16 @@
         	var div = $(this);
         	div.stop(true, true).animate({ 
             width: "62%",
-            height: "50",
+            height: "50%",
+			padding: "1.3em"
         	}, 'fast');
     	})
     	.on('mouseleave', function(){
         	var div = $(this);
         	div.stop(true, true).animate({ 
             width: "60%",
-            height: "20%"
+            height: "20%",
+			padding: "1em"
         	}, 'fast');
     	})
 	</script>
