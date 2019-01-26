@@ -17,13 +17,13 @@ var $regxgender = /^(?:m|M|male|Male|f|F|female|Female|FEMALE|MALE)$/;
 function copyToInput() {
     var inputGroup = $(".table-col").find("input:text");
     inputGroup.each(
-        function() {
-            var infoText = $.trim($(this).parents(".table-col").find(".info").text());
-            $(this).val();
-            console.log($(this).val(infoText));
-        }
-    )
-    console.log("copyToInput run!");
+            function() {
+                var infoText = $.trim($(this).parents(".table-col").find(".info").text());
+                $(this).val(infoText);
+                // console.log($(this).val());
+            }
+        )
+        //console.log("copyToInput run!");
 }
 
 
@@ -56,6 +56,8 @@ $(".btn-update").click(
         var $regExp;
         var errorMsg;
 
+        //console.log(input.attr("name"));
+
         switch (input.attr("name")) {
             case 'id':
                 $regExp = $regexid;
@@ -70,10 +72,9 @@ $(".btn-update").click(
                 $regExp = $regxemail;
                 errorMsg = "1. The example: xxx11@gmail.com\n2. The email must include '@gmail.com'\n3. Minimum 5 letter or number before 'gmail.com'";
                 break;
-            case 'gender':
-                $regExp = $regxgender;
-                errorMsg = "1. Male, MALE, M, m\n2. Female, FEMALE, F, f";
-                break;
+            default:
+                validateGender();
+                return false;
 
         }
         //console.log($regExp);
@@ -92,6 +93,25 @@ $(".btn-update").click(
         }
     }
 )
+
+function validateGender() {
+    copyToInput();
+    var male = $("#male");
+    var female = $("#female");
+    if (male.is(":checked")) {
+        console.log(male);
+        $("#updateUser").submit();
+    } else if (female.is(":checked")) {
+        console.log(female);
+        $("#updateUser").submit();
+    } else {
+        alert("Please select correct gender!");
+    }
+
+
+
+}
+
 
 /*
  * Showed edit icon when the mouse is hover on the info tabs

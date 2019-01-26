@@ -144,13 +144,31 @@
 						</tr>
 						<tr>
 							<td>Gender</td>
-							<td class = "table-col">
+							<td class = "table-col gender-tab">
 								<div class="info">
 									<?php echo $_SESSION['gender']?>
 									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
 								</div>
 								<div class="input-group mb-3">
-									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="gender" id ="gender">
+									<!--<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="gender" id ="gender">-->
+									<div class="form-check form-check-inline">
+										<label class="radio-container">Male
+											<input class ="" type="radio" name="gender" class="" id ="male" value = "M">
+											<span class="checkmark"></span>											
+										</label>
+									</div>
+									<!--<div class="form-check form-check-inline">
+										<label class="radio-container">One
+											<input type="radio"  name="radio">
+											<span class="checkmark"></span>
+										</label>
+									</div>-->
+									<div class="form-check form-check-inline">
+										<label class = "radio-container">Female									
+											<input class ="" type="radio" name="gender" class="" id ="female" value = "F">
+											<span class="checkmark"></span>
+										</label>
+									</div>
 									<div class="input-group-append">
 										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
@@ -175,7 +193,71 @@
 		</div>
 	</div>
 </body>
+<style>
+/* The container */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
 <body>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
