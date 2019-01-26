@@ -186,12 +186,3 @@
 }
 
 </style>
-  
-<script>
-$(".navbar-toggler-icon").click(
-  alert("clicked");
-    function(){
-      $(".navbar-collapse").toggle(300);
-    }
-  )
-</script>
