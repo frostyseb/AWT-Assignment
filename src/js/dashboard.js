@@ -9,10 +9,12 @@ var $regxemail = /^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/;
 var $regxgender = /^(?:m|M|male|Male|f|F|female|Female|FEMALE|MALE)$/;
 
 function copyToInput() {
-    var inputGroup = $(".table-col").children(".info");
+    var inputGroup = $(".table-col").find("input:text");
     inputGroup.each(
         function() {
-            $(this).val($(this).parents(".table-col").children(".info").text());
+            var infoText = $.trim($(this).parents(".table-col").find(".info").text());
+            $(this).val();
+            console.log($(this).val(infoText));
         }
     )
     console.log("copyToInput run!");
@@ -68,6 +70,7 @@ $(".btn-update").click(
             tableCol.children(".info").show(showTime).delay(delayTime);
             alert(input.val() + " has been updated!");
             copyToInput();
+            $("#updateUser").submit();
         }
     }
 )
@@ -103,7 +106,6 @@ $(".info").click(
         if ($(this).is(":hidden")) {
 
         } else {
-            inputText.find("input:text").val("");
             inputText.find("input:text").val(infoValue);
             inputText.find("input:text").attr("placeholder", infoValue);
             //console.log("Copied to input-group")

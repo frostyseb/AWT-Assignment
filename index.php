@@ -1,10 +1,43 @@
 <?php 
 	session_start();
 
+	include_once 'includes/Dbh.inc.php';
+	include_once 'includes/user.inc.php';
+	
 	if(!isset($_SESSION['access_token'])){
 		header('Location: login.php');
 		exit();
 	}
+
+	// define variables and set to empty values
+	$id = $givenName = $familyName = $email = $gender = "";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+	$id = $_POST["id"];
+	$givenName = $_POST["givenName"];
+	$familyName = $_POST["familyName"];
+	$email = $_POST["email"];
+	$gender = $_POST["gender"];
+
+	$userDataArray = array(
+        'oProvider'=> 'google',
+        'oUid'     => $id,
+        'fName'    => $givenName,
+        'lName'     => $familyName,
+        'email'         => $email,
+        'gender'        => $gender = $_POST["gender"],
+        'locale'        => 'en',
+		'picture'       => $_SESSION['picture']
+
+	);
+	
+	$user = new User;
+	$finalUserData = $user->checkUser($userDataArray);
+	$user->fetchUser();
+
+    header('Location: '.$_SERVER['REQUEST_URI']);
+}
 
  ?>
 <!DOCTYPE html>
@@ -37,6 +70,7 @@
 			<div class="col-md-9">
 				<table class="table table-hover table-bordered">
 					<tbody>
+					<form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "POST" id = "updateUser">
 						<tr>
 							<td>ID</td>
 							<td class = "">
@@ -46,7 +80,7 @@
 								</div>
 
 								<div class="input-group mb-3">
-									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="id" id ="id">
+									<input type="text" value = "<?php echo $_SESSION['id']?>" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="id" id ="id">
 									<div class="input-group-append">
 										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
@@ -121,6 +155,7 @@
 								</div>
 							</td>
 						</tr>
+					</form>
 						<tr>
 							<td></td>
 							<td>

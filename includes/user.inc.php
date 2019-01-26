@@ -71,7 +71,6 @@
             "first_name = '"   . $this->fName    .   "', " .
             "last_name = '"    . $this->lName    .   "', " .
             "email = '"        . $this->email    .   "', " .
-            "gender = '"       . $this->gender   .   "', " .
             "locale = '"       . $this->locale   .   "', " .
             "picture = '"      . $this->picture  .   "', " .
             "modified = '"     . date("Y-m-d H:i:s") . "' ".
@@ -89,6 +88,22 @@
         private function setUserDataArray($array = array()){
             $this->userDataArray = $array;
             $this->separateFromArray();
+        }
+
+        public function fetchUser(){
+            $stmt = $this->connect()->prepare("SELECT * FROM users WHERE oauth_uid=?");
+            $stmt->execute([$this->oUid]);
+
+            if($stmt->rowCount()){
+                while($row = $stmt->fetch()){
+                    $_SESSION['id'] = $this->oUid;
+                    $_SESSION['email'] = $this->email;
+                    $_SESSION['gender'] = $this->gender;
+                    $_SESSION['picture'] = $this->picture;
+                    $_SESSION['familyName'] = $this->lName;
+                    $_SESSION['givenName'] = $this->fName;
+                }
+            }
         }
 
         
