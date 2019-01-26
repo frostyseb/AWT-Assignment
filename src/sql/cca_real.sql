@@ -17,6 +17,15 @@ ALTER TABLE cca
     ADD CONSTRAINT FK_CCA
     FOREIGN KEY (oauth_uid) REFERENCES users(oauth_uid);
 
+    ALTER TABLE `users` ADD UNIQUE(`oauth_uid`);
+
+    ALTER TABLE `cca` ADD INDEX(`uid`);
+
+    INSERT INTO `cca` (`id`, `uid`, `first_club`, `second_club`, `third_club`, `total_cca`, `modified`) VALUES (NULL, '100136233479342848779', 'Innovation', 'QPC', 'Pharmacy', '5', '2019-01-26 00:00:00');
+
+    ALTER TABLE users DROP COLUMN id;
+    ALTER TABLE users ADD id INT NOT NULL AUTO_INCREMENT Primary key FIRST
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -41,6 +50,9 @@ DROP COLUMN column_name;
     ALTER TABLE Orders
     ADD CONSTRAINT FK_PersonOrder
     FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+    
+
 
 $mysqli->query("ALTER TABLE data DROP COLUMN id") or die($mysqli->error);
 $mysqli->query("ALTER TABLE data ADD id INT NOT NULL AUTO_INCREMENT Primary key FIRST") or die($mysqli->error);
