@@ -5,6 +5,7 @@
 		header('Location: login.php');
 		exit();
 	}
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,8 +39,8 @@
 					<tbody>
 						<tr>
 							<td>ID</td>
-							<td class = "table-col">
-								<div class="info">
+							<td class = "">
+								<div class="">
 									<?php echo $_SESSION['id']?>
 									<i class='fa fa-lg fa-fw'></i>
 								</div>
@@ -47,7 +48,7 @@
 								<div class="input-group mb-3">
 									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="id" id ="id">
 									<div class="input-group-append">
-										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 									</div>
 								</div>
@@ -64,7 +65,7 @@
 								<div class="input-group mb-3">
 									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="givenName" id ="givenName">
 									<div class="input-group-append">
-										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 									</div>
 								</div>
@@ -81,7 +82,7 @@
 								<div class="input-group mb-3">
 									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="familyName" id ="familyName">
 									<div class="input-group-append">
-										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 									</div>
 								</div>
@@ -98,7 +99,7 @@
 								<div class="input-group mb-3">
 									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="email" id ="email">
 									<div class="input-group-append">
-										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 									</div>
 								</div>
@@ -114,7 +115,7 @@
 								<div class="input-group mb-3">
 									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="gender" id ="gender">
 									<div class="input-group-append">
-										<button class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw' id ='updateBtn'></i>Update</button>
+										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 									</div>
 								</div>
@@ -126,7 +127,7 @@
 								<form action="logout.php" class="form-inline pull-xs-right" style="" method="POST" id="logoutF">
                     				<a id="logoutBtn" class="btn btn-success" href="#" 
 									onclick="document.getElementById('logoutF').submit();">
-									<i class="fa fa-sign-out fa-lg fa-fw" id ="logout-fa"></i><div id ="logoutBtn-value" style ="Display:inline;">Logout</div></a>
+									<i class="fa fa-sign-out fa-lg fa-fw" id ="logout-fa"></i><div style ="Display:inline;">Logout</div></a>
                					 </form>
 							</td>
 						</tr>
@@ -145,6 +146,8 @@
 	<!--<script src="vendor/node_modules/initjQuery.js"></script>-->
 	<!-- script for edit the form -->
 	
+<script>
 
+</script>
 </body>
 </html>
