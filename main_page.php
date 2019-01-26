@@ -141,6 +141,17 @@
 	
 </body>
 
-
+<script>
+$(document).ready(
+	function() {
+		$(".navbar-collapse").hide();
+	}
+)
+$(".navbar-toggler-icon").click(
+    function() {
+        $(".navbar-collapse").toggle(500).delay(200);
+    }
+)
+</script>
 
 </html>
