@@ -58,7 +58,7 @@
 		<div id="news-item">
 			<b>BREAKING NEWS</b>
 			<p>Free CCA hours for everybody</p>
-	</div>
+		</div>
 	</div> <!-- END carousel-item active -->
 	<div class="carousel-item">
 		<div id="news-item">Insert news here</div>
@@ -136,32 +136,19 @@
 		</div> <!-- END fb-page -->
 	</div> <!-- END fb-api -->
 	
-	<h4>Clubs & Societies</h4>
-	<div class="list">
-		<div class="list-item">Music Club</div>
-		<div class="list-item">Debate Club</div>
-		<div class="list-item">Care Club</div>
-		<div class="list-item">Innovation Club</div>
-		<div class="list-item">Photography Club</div>
-		<div class="list-item">Biotech Club</div>
-		<div class="list-item">International Students Club</div>
-		<div class="list-item">Human Resource Club</div>
-		<div class="list-item">Student Representative Council</div>
-		<div class="list-item">Pharmacy Students Society</div>
-		<div class="list-item">Hindu Society</div>
-		<div class="list-item">Christian Society</div>
-		<div class="list-item">Sikh Society</div>
-		<div class="list-item">Chinese Society</div>
-		<div class="list-item">Muslim Society</div>
-		<div class="list-item">International Commerce Club</div>
-		<div class="list-item">Cricket Club</div>
-		<div class="list-item">Badminton Club</div>
-		<div class="list-item">Futsal & Football Club</div>
-		<div class="list-item">Basketball Club</div>
-		<div class="list-item">Gamers Club</div>
-		<div class="list-item">Indoor Club</div>
-		<div class="list-item">Outdoor Club</div>
-	</div>
+	<?php
+	echo "<h4>Clubs & Societies</h4>";
+	
+	$xml = simplexml_load_file("clubs_societies.xml") or die("Error: Cannot create object");
+	
+	echo "<div class='list'>";
+	
+	foreach($xml->club as $name) {
+		echo "<div class='list-item'>" . $name . "</div>";
+	}
+	
+	echo "</div>";
+	?>
 	
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 	
