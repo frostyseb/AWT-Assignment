@@ -2,6 +2,7 @@
     require_once "config.php";
     include_once 'includes/Dbh.inc.php';
     include_once 'includes/user.inc.php';
+    include_once 'includes/cca.inc.php';
 
     if(isset($_SESSION['access_token']))
         $gClient->setAccessToken($_SESSION['access_token']);
@@ -42,6 +43,19 @@
     =================================================
     ";
     var_dump($_SESSION);
+
+    if(!$_SESSION['id']){
+        header ("Location: login.php");
+    }
+    else{
+        fetchData();
+    }
+
+    function fetchData(){
+        $ccaData = new Cca;
+        $ccaData->fetchCca();
+        
+    }
 
     header('Location: index.php');
     exit();

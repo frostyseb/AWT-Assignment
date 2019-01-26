@@ -143,6 +143,23 @@
 							</td>
 						</tr>
 						<tr>
+							<td>First Club</td>
+							<td class = "table-col">
+								<div class="info">
+									<?php echo $_SESSION['first_club']?>
+									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
+								</div>
+								
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="firstClub" id ="firstClub">
+									<div class="input-group-append">
+										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
+										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
 							<td>Gender</td>
 							<td class = "table-col gender-tab">
 								<div class="info">
@@ -176,7 +193,9 @@
 								</div>
 							</td>
 						</tr>
+						
 					</form>
+					
 						<tr>
 							<td></td>
 							<td>

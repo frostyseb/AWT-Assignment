@@ -65,6 +65,7 @@ $(".btn-update").click(
                 break;
             case 'givenName':
             case 'familyName':
+            case 'firstClub':
                 $regExp = $regexname;
                 errorMsg = "1. The name should be all letter\n2. The length of the name should be 3 - 16 letter";
                 break;
