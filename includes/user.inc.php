@@ -26,8 +26,14 @@
 
         }
 
+        public function updateGender($gender){
+            $this->gender = $gender;
+            $update = $this->connect()->query($this->updateUser);
+
+        }
+
         //Automatically separate the data from array into variable
-        public function separateFromArray(){
+        private function separateFromArray(){
             $this->oProvider = $this->userDataArray['oProvider'];
             $this->oUid = $this->userDataArray['oUid'];
             $this->fName = $this->userDataArray['fName'];
@@ -80,7 +86,7 @@
         }
 
         //Set the user data array when checkUser() called
-        public function setUserDataArray($array = array()){
+        private function setUserDataArray($array = array()){
             $this->userDataArray = $array;
             $this->separateFromArray();
         }
