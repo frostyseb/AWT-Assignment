@@ -20,7 +20,7 @@
 	$userData = $oAuth->userinfo_v2_me->get();
 
 	echo "<pre>";
-    var_dump($userData);
+    //var_dump($userData);
 
     
 
@@ -31,22 +31,19 @@
         'fName'    => $userData['givenName'],
         'lName'     => $userData['familyName'],
         'email'         => $userData['email'],
-        'gender'        => $userData['gender'],
         'locale'        => $userData['locale'],
         'picture'       => $userData['picture']
     );
-
+    
     $user = new User;
     $finalUserData = $user->checkUser($userDataArray);
-    
-    $_SESSION['id'] = $userData['id'];
-    $_SESSION['email'] = $userData['email'];
-    $_SESSION['gender'] = $userData['gender'];
-    $_SESSION['picture'] = $userData['picture'];
-    $_SESSION['familyName'] = $userData['familyName'];
-    $_SESSION['givenName'] = $userData['givenName'];
+    $user->fetchUser();
+    echo "
+    =================================================
+    ";
+    var_dump($_SESSION);
 
     header('Location: index.php');
-    //exit();
+    exit();
 
 ?>
