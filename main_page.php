@@ -136,6 +136,7 @@
 		</div> <!-- END fb-page -->
 	</div> <!-- END fb-api -->
 	
+	<br>
 	<?php
 	echo "<h4>Clubs & Societies</h4>";
 	
@@ -144,11 +145,29 @@
 	echo "<div class='list'>";
 	
 	foreach($xml->club as $name) {
-		echo "<div class='list-item'>" . $name . "</div>";
+		echo "<div class='list-item'><b>" . $name . "</b></div>";
 	}
 	
 	echo "</div>";
 	?>
+
+	<script>
+		$('.list-item')
+    	.on('mouseenter', function(){
+        	var div = $(this);
+        	div.stop(true, true).animate({ 
+            width: "62%",
+            height: "50",
+        	}, 'fast');
+    	})
+    	.on('mouseleave', function(){
+        	var div = $(this);
+        	div.stop(true, true).animate({ 
+            width: "60%",
+            height: "20%"
+        	}, 'fast');
+    	})
+	</script>
 	
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 	

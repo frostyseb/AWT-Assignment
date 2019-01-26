@@ -29,3 +29,15 @@
 #news-item {
 	margin:20px 150px 20px 150px;
 }
+
+.list-item {
+	padding: 5px 5px 5px 5px;
+	width: 60%;
+	height: 20%;
+	background-color: dodgerblue;
+	font-family: 'Roboto Slab', serif;
+}
+
+.list-item:hover{
+	background-color: lightskyblue;
+}
