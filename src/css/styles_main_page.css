@@ -11,6 +11,15 @@
 	padding:3em;
 	padding-top:0;
 	text-align:center;
+	float: left;
+}
+
+.list {
+	float: right;
+	width: 50%;
+	padding:3em;
+	padding-top:0;
+	font-family: 'Comfortaa', cursive;
 }
 
 #news {
