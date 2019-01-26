@@ -12,7 +12,7 @@
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 
 	<!--Google font style-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis|Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis|Indie+Flower|Comfortaa" rel="stylesheet">
 	
 	<!--Bootstrap CSS for slideshow-->
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
@@ -22,29 +22,25 @@
 	<link rel="stylesheet" href="src/css/styles_main_page.css" type="text/css">
 	
 </head>
+
 <?php include 'simpleNav.php';?>
+
 <script src="suggest.js"></script>
+
 <body>
 	<!--Facebook API-->
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
-		fjs.parentNode.insertBefore(js, fjs);
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<div id = "header">
-		<div class='m'>
-			<font face="Indie Flower"><marquee scrollamount="10">! ! WELCOME TO THE QIUP CCA WEBSITE ! !</marquee></font>
-		</div>
-	</div>
-	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-	<h3>Previous Events</h3>
 	
 	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
@@ -79,12 +75,22 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="Touch-Swipe-Bootstrap-Carousel/dist/bootstrap-swipe-carousel.js"></script>
 	
+	<div id = "header">
+		<div class='m'>
+			<br>
+			<font face="Indie Flower"><strong><marquee scrollamount="10">! ! WELCOME TO THE QIUP CCA WEBSITE ! !</marquee></strong></font>
+		</div> <!-- END m -->
+	</div> <!-- END header -->
 	
-	<div class="fb-page" data-href="https://www.facebook.com/QuestInternationalUniversityPerak/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-		<blockquote cite="https://www.facebook.com/QuestInternationalUniversityPerak/" class="fb-xfbml-parse-ignore">
-			<a href="https://www.facebook.com/QuestInternationalUniversityPerak/">Quest International University Perak (QIUP)</a>
-		</blockquote>
-	</div> <!-- END fb-page -->
+	<div class="fbAPI">
+		<br>
+		<h4>Check out the latest CCA activities or <br>events from  <i class="fa fa-facebook-square" style="color:darkblue;"></i> QIUP Facebook!</h4>
+		<div class="fb-page" data-href="https://www.facebook.com/QuestInternationalUniversityPerak/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+			<blockquote cite="https://www.facebook.com/QuestInternationalUniversityPerak/" class="fb-xfbml-parse-ignore">
+				<a href="https://www.facebook.com/QuestInternationalUniversityPerak/">Quest International University Perak (QIUP)</a>
+			</blockquote>
+		</div> <!-- END fb-page -->
+	</div> <!-- END fb-api -->
 	
 	
 	<?php include 'includes/bootstrapF.inc.php'; ?>
