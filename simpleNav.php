@@ -232,6 +232,11 @@ input[type=text] {
   border-bottom:1px solid #A2A2A2;
 }
 
+#hintText{
+  position:absolute;
+}
+
+
 .autocompleteItems :hover {
   /*when hovering an item:*/
   background-color: #e9e9e9; 
