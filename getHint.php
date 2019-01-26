@@ -1,4 +1,3 @@
-
 <?php
 
 $q = $_REQUEST["q"];
@@ -17,13 +16,14 @@ if ($q !== "") {
         if (stristr($q, substr($name, 0, $len))) {
             if ($hint === "") {
                 $hint = $name;
+				echo "<button type='button' onclick='addTxt(this)' data-suggest='" . $hint . "' class='autocompleteItems'>" . $hint . "</button>";
             } 
 			else {
-				$hint .= ", $name";      
+				echo "<button type='button' onclick='addTxt(this)' data-suggest='" . $name . "' class='autocompleteItems'>" . $name . "</button>";    
             }
         }
 	
     }
 }
-echo $hint === "" ? "no suggestion" : $hint;
+
 ?>
