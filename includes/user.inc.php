@@ -78,7 +78,14 @@
         private function setSession(){
             $_SESSION['id'] = $this->oUid;
             $_SESSION['email'] = $this->email;
-            $_SESSION['gender'] = $this->gender;
+            switch($this->gender){
+                case 'F':
+                    $_SESSION['gender'] = 'Female';
+                    break;
+                case 'M':
+                    $_SESSION['gender'] = 'Male';
+                    break;
+            }
             $_SESSION['picture'] = $this->picture;
             $_SESSION['familyName'] = $this->lName;
             $_SESSION['givenName'] = $this->fName;
