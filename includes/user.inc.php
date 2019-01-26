@@ -26,12 +26,6 @@
 
         }
 
-        public function updateGender($gender){
-            $this->gender = $gender;
-            $update = $this->connect()->query($this->updateUser);
-
-        }
-
         //Automatically separate the data from array into variable
         private function separateFromArray(){
             $this->oProvider = $this->userDataArray['oProvider'];
@@ -39,7 +33,7 @@
             $this->fName = $this->userDataArray['fName'];
             $this->lName = $this->userDataArray['lName'];
             $this->email = $this->userDataArray['email'];
-            $this->gender = $this->userDataArray['gender'];
+            $this->gender;
             $this->locale = $this->userDataArray['locale'];
             $this->picture = $this->userDataArray['picture'];
              
@@ -58,7 +52,6 @@
             "first_name = '"   . $this->fName    .   "', " .
             "last_name = '"    . $this->lName    .   "', " .
             "email = '"        . $this->email    .   "', " .
-            "gender = '"       . $this->gender   .   "', " .
             "locale = '"       . $this->locale   .   "', " .
             "picture = '"      . $this->picture  .   "', " .
             "created = '"      . date("Y-m-d H:i:s") . "', ".
@@ -80,8 +73,15 @@
             "oauth_uid ='"      .   $this->oUid      .   "'"
             ;
 
+        }
 
-
+        private function setSession(){
+            $_SESSION['id'] = $this->oUid;
+            $_SESSION['email'] = $this->email;
+            $_SESSION['gender'] = $this->gender;
+            $_SESSION['picture'] = $this->picture;
+            $_SESSION['familyName'] = $this->lName;
+            $_SESSION['givenName'] = $this->fName;
         }
 
         //Set the user data array when checkUser() called
@@ -90,20 +90,29 @@
             $this->separateFromArray();
         }
 
+        public function updateGender($gender){
+            $stmt = $this->connect()->prepare("UPDATE users SET gender=? WHERE oauth_uid=?");
+            $stmt->execute([$gender,$this->oUid]);
+        }
+
         public function fetchUser(){
             $stmt = $this->connect()->prepare("SELECT * FROM users WHERE oauth_uid=?");
             $stmt->execute([$this->oUid]);
 
             if($stmt->rowCount()){
                 while($row = $stmt->fetch()){
-                    $_SESSION['id'] = $this->oUid;
-                    $_SESSION['email'] = $this->email;
-                    $_SESSION['gender'] = $this->gender;
-                    $_SESSION['picture'] = $this->picture;
-                    $_SESSION['familyName'] = $this->lName;
-                    $_SESSION['givenName'] = $this->fName;
+                    $this->oProvider = $row['oauth_provider'];
+                   $this->oUid = $row['oauth_uid'];
+                   $this->fName = $row['first_name'];
+                   $this->lName = $row['last_name'];
+                   $this->email = $row['email'];
+                   $this->gender = $row['gender'];
+                   $this->locale = $row['locale'];
+                   $this->picture = $row['picture'];
+                  // echo"<pre>". var_dump($row)."</pre>";
                 }
             }
+            $this->setSession();
         }
 
         
@@ -116,7 +125,7 @@
 
                 $stmt = $this->connect()->query($this->oProvider_oUid);
                 if($stmt->rowCount()){
-                    var_dump($this->userDataArray);
+                    //_dump($this->userDataArray);
                     $update = $this->connect()->query($this->updateUser);
                     echo "There is data";
                 }
@@ -128,6 +137,7 @@
                 $userData = $stmt->fetch();
 
             }
-            return $userData;
+             $this->fetchUser();
+            //return $userData;
         }
     }
