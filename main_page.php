@@ -50,14 +50,22 @@
 	<li data-target="#news" data-slide-to="0" class="active"></li>
 	<li data-target="#news" data-slide-to="1" class=""></li>
 	<li data-target="#news" data-slide-to="2" class=""></li>
+	<li data-target="#news" data-slide-to="3" class=""></li>
+	<li data-target="#news" data-slide-to="4" class=""></li>
 	</ol>
 	<div class="carousel-inner">
 	<div class="carousel-item active">
 		<div id="news-item">
-			<h4>BREAKING NEWS</h4>
-			<p>QIUP is introducing new CCA!!</p>
+			<b>BREAKING NEWS</b>
+			<p>Free CCA hours for everybody</p>
 	</div>
 	</div> <!-- END carousel-item active -->
+	<div class="carousel-item">
+		<div id="news-item">Insert news here</div>
+	</div> <!-- END carousel-item -->
+	<div class="carousel-item">
+		<div id="news-item">Insert news here</div>
+	</div> <!-- END carousel-item -->
 	<div class="carousel-item">
 		<div id="news-item">Insert news here</div>
 	</div> <!-- END carousel-item -->
