@@ -20,13 +20,15 @@
 	$email = $_POST["email"];
 	$gender = $_POST["gender"];
 
+	//var_dump($gender);
+
 	$userDataArray = array(
         'oProvider'=> 'google',
         'oUid'     => $id,
         'fName'    => $givenName,
         'lName'     => $familyName,
         'email'         => $email,
-        'gender'        => $gender = $_POST["gender"],
+        'gender'        => $gender,
         'locale'        => 'en',
 		'picture'       => $_SESSION['picture']
 
@@ -34,6 +36,7 @@
 	
 	$user = new User;
 	$finalUserData = $user->checkUser($userDataArray);
+	$user->updateGender($gender);
 	$user->fetchUser();
 
     header('Location: '.$_SERVER['REQUEST_URI']);
