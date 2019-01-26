@@ -41,12 +41,48 @@
 	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-	<div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
+
+	<h3>News & Updates</h3>
+
+	<!--News Carousel-->
+	<div id="news" class="carousel slide my-carousel" data-ride="carousel">
+	<ol class="carousel-indicators">
+	<li data-target="#news" data-slide-to="0" class="active"></li>
+	<li data-target="#news" data-slide-to="1" class=""></li>
+	<li data-target="#news" data-slide-to="2" class=""></li>
+	</ol>
+	<div class="carousel-inner">
+	<div class="carousel-item active">
+		<div id="news-item">
+			<h4>BREAKING NEWS</h4>
+			<p>QIUP is introducing new CCA!!</p>
+	</div>
+	</div> <!-- END carousel-item active -->
+	<div class="carousel-item">
+		<div id="news-item">Insert news here</div>
+	</div> <!-- END carousel-item -->
+	<div class="carousel-item">
+		<div id="news-item">Insert news here</div>
+	</div> <!-- END carousel-item -->
+	</div> <!-- END carousel-inner -->
+	<a class="carousel-control-prev" href="#news" role="button" data-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#news" role="button" data-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="sr-only">Next</span>
+	</a>
+	</div> <!-- END carousel -->
+
+	<h3>Recent Events</h3>
+
+	<!-- Events Carousel -->
+	<div id="events" class="carousel slide my-carousel" data-ride="carousel">
 	  <ol class="carousel-indicators">
-		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+		<li data-target="#events" data-slide-to="0" class="active"></li>
+		<li data-target="#events" data-slide-to="1" class=""></li>
+		<li data-target="#events" data-slide-to="2" class=""></li>
 	  </ol>
 	  <div class="carousel-inner">
 		<div class="carousel-item active">
@@ -59,15 +95,15 @@
 		  <img class="d-block w-100" src="src/assets/pic3.png" alt="Third slide">
 		</div> <!-- END carousel-item -->
 	  </div> <!-- END carousel-inner -->
-	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	  <a class="carousel-control-prev" href="#events" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		<span class="sr-only">Previous</span>
 	  </a>
-	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	  <a class="carousel-control-next" href="#events" role="button" data-slide="next">
 		<span class="carousel-control-next-icon" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	  </a>
-	</div> <!-- END carouselExampleIndicators -->
+	</div> <!-- END events -->
 	
 	<!--Bootstrap js for slideshow-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
