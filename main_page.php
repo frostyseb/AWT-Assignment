@@ -21,16 +21,21 @@
 	<!--CSS Stylesheet-->
 	<link rel="stylesheet" href="src/css/styles_main_page.css" type="text/css">
 	
-	<!--Facebook API-->
-	<script src="API/FacebookAPI/fbAjax.js"></script>
-	<?php include 'API/FacebookAPI/facebook_feed.php'; ?>
-	<?php include 'API/FacebookAPI/facebook_feed_next.php'; ?>
-	<?php include 'API/FacebookAPI/facebook_functions.php'; ?>
-	
 </head>
 <?php include 'simpleNav.php';?>
 <script src="suggest.js"></script>
 <body>
+	<!--Facebook API-->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
 	<div id = "header">
 		<div class='m'>
 			<font face="Indie Flower"><marquee scrollamount="10">! ! WELCOME TO THE QIUP CCA WEBSITE ! !</marquee></font>
@@ -75,25 +80,11 @@
 	<script src="Touch-Swipe-Bootstrap-Carousel/dist/bootstrap-swipe-carousel.js"></script>
 	
 	
-	<div id="facebook_feed">
-		<h3>The Latest</h3>
-
-		<div class="sk-cube-grid">
-		  <div class="sk-cube sk-cube1"></div>
-		  <div class="sk-cube sk-cube2"></div>
-		  <div class="sk-cube sk-cube3"></div>
-		  <div class="sk-cube sk-cube4"></div>
-		  <div class="sk-cube sk-cube5"></div>
-		  <div class="sk-cube sk-cube6"></div>
-		  <div class="sk-cube sk-cube7"></div>
-		  <div class="sk-cube sk-cube8"></div>
-		  <div class="sk-cube sk-cube9"></div>
-		</div> <!-- END sk-cube-grid -->
-
-		<div id="ajax_response">
-		</div> <!-- END ajax_response -->
-
-	</div> <!-- END facebook_feed -->
+	<div class="fb-page" data-href="https://www.facebook.com/QuestInternationalUniversityPerak/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+		<blockquote cite="https://www.facebook.com/QuestInternationalUniversityPerak/" class="fb-xfbml-parse-ignore">
+			<a href="https://www.facebook.com/QuestInternationalUniversityPerak/">Quest International University Perak (QIUP)</a>
+		</blockquote>
+	</div> <!-- END fb-page -->
 	
 	
 	<?php include 'includes/bootstrapF.inc.php'; ?>
