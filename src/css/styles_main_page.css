@@ -78,3 +78,15 @@
 	padding:0.2em;
 	font-size:2em;
 }
+
+.footer h4{
+	font-family: 'Exo', sans-serif;
+	color:#fff;
+}
+
+.footer p{
+	font-family: 'Exo', sans-serif;
+	color:#fff;
+	font-size:0.7em;
+	padding:1em;
+}
