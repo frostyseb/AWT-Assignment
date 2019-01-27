@@ -7,6 +7,7 @@
 
 .ev {
 	font-family: 'Special Elite', cursive;
+	text-align: center;
 }
 
 .fbAPI {
@@ -26,6 +27,10 @@
 	font-family: 'Comfortaa', cursive;
 }
 
+.clubSoc {
+	margin-left: 19%;
+}
+
 #news {
 	width: auto; 
 	height: 300px; 
@@ -38,7 +43,7 @@
 
 .list-item {
 	padding: 1em;
-	width: 60%;
+	width: 70%;
 	height: 20%;
 	background-color: dodgerblue;
 	font-family: 'Roboto Slab', serif;

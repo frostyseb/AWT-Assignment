@@ -168,7 +168,7 @@
 			.on('mouseenter', function () {
 				var div = $(this);
 				div.stop(true, true).animate({
-					width: "62%",
+					width: "72%",
 					height: "50%",
 					padding: "1.3em"
 				}, 'fast');
@@ -176,7 +176,7 @@
 			.on('mouseleave', function () {
 				var div = $(this);
 				div.stop(true, true).animate({
-					width: "60%",
+					width: "70%",
 					height: "20%",
 					padding: "1em"
 				}, 'fast');
