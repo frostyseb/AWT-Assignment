@@ -51,6 +51,16 @@
 	background-color: lightskyblue;
 }
 
-.backTop{
+.backTop a{
 	clear:both;
+	float:right;
+	padding:2em;
+	text-align:right;
+	font-family: 'Comfortaa', cursive;
+	color:#000;
+}
+
+.backTop a:hover{
+	text-decoration:none;
+	color:#5D5D5D;
 }
