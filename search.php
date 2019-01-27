@@ -13,6 +13,8 @@
 
 </head>
 
+<?php include 'simpleNav.php';?>
+
 <body>
 
 	<?php
