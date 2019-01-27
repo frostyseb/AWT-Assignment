@@ -3,6 +3,7 @@
 
 	include_once 'includes/Dbh.inc.php';
 	include_once 'includes/user.inc.php';
+	include_once 'includes/cca.inc.php';
 	
 	if(!isset($_SESSION['access_token'])){
 		header('Location: login.php');
@@ -26,13 +27,14 @@
 		
 			$userDataArray = array(
 				'oProvider'=> 'google',
-				'oUid'     => $id,
+				'oUid'     => $_SESSION['id'],
 				'fName'    => $givenName,
 				'lName'    => $familyName,
 				'email'    => $email,
 				'gender'   => $gender,
 				'locale'   => 'en',
 				'picture'  => $_SESSION['picture']
+				
 		
 			);
 			
@@ -40,6 +42,21 @@
 			$finalUserData = $user->checkUser($userDataArray);
 			$user->updateGender($gender);
 			$user->fetchUser();
+		}
+
+		if(isset($_POST['clubForm'])){
+
+			$clubFormData = array(
+				'uid'     => $_SESSION['id'],
+				'first_club'    => $_POST['first_club'],
+				'second_club'    => $_POST['second_club'],
+				'third_club'    => $_POST['third_club'],
+				'total_cca'   => $_POST['total_cca']
+			);
+
+			$cca = new Cca;
+			$cca->checkCca($clubFormData);
+			$cca->fetchCca();
 		}
 
     header('Location: '.$_SERVER['REQUEST_URI']);
@@ -255,6 +272,8 @@ if($pageWasRefreshed ) {
 						<div class="col-md-9">
 							<table class="table table-hover table-bordered">
 								<tbody>
+								<form id="clubForm" name = "clubForm" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method ="POST">
+									<input type="hidden" name="clubForm" value = "SET">
 									<tr>
 										<td>Name</td>
 										<td class="table-col">
@@ -335,11 +354,12 @@ if($pageWasRefreshed ) {
 									<tr>
 										<td></td>
 										<td>
-											<button id="club-btn" class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
+											<button id="club-btn" class="btn btn-success" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 											<button class="btn btn-success btn-edit" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i><div style="display:inline;" class="btn-value">Edit</div></button>
 											</form>
 										</td>
 									</tr>
+								</form>
 								</tbody>
 							</table>
 						</div>

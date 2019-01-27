@@ -37,6 +37,7 @@ $(document).ready(
         $(".navbar-collapse").hide();
         $(".input-group").hide();
         $(".info").children("i").removeClass("fa-pencil-square-o");
+        $("#club-btn").hide();
     }
 )
 
@@ -211,7 +212,17 @@ $(".btn-edit").click(
             $(this).removeClass("btn-danger").addClass("btn-success");
             $(this).children("i").removeClass("fa-remove").addClass("fa-pencil-square-o");
             $(this).children(".btn-value").text("Edit");
+
             isEdit = true;
         }
-
+        // console.log($(this).parents("td").children("#club-btn"));
+        var clubtBtn = $(this).parents("td").children("#club-btn");
+        clubtBtn.toggle(toggleTime);
     })
+
+$("#club-btn").click(
+    function() {
+        alert("Form submited!");
+        $("#clubForm").submit();
+    }
+)
