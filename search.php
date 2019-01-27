@@ -22,9 +22,10 @@
 <?php include 'simpleNav.php';?>
 
 <body>
-
+	<br><h1 class='resultTitle'>Search Results</h1><br>
+	
 	<?php
-	echo "<br><h1 class='resultTitle'>Search Results</h1><br>";
+	
 	
 	$query = $_POST["clubs"];
 	$query = htmlspecialchars($query);
@@ -36,7 +37,7 @@
 	$xml = simplexml_load_file("clubs_societies.xml") or die("Error: Cannot create object");
 	
 	foreach($xml->club as $name) {
-        if (stristr($query, substr($name, 0, $len))) {
+		if (stristr($query, substr($name, 0, $len))) {
 			echo "<div class='result'><a href='#'>" . $name . "</a></div><br><br>";
 			$flag = 1;
 		}
@@ -47,9 +48,13 @@
 	}
 	
 	?>
+
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-		
+		$(document).ready(function(){
+			$(".result").fadeIn(1500);
+		});
 	</script>
 	
 </body>
