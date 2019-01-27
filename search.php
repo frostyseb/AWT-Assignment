@@ -14,11 +14,14 @@
 	
 	foreach($xml->club as $name) {
         if (stristr($query, substr($name, 0, $len))) {
-			echo $name . "<br>";
+			echo "<a>" . $name . "</a><br>";
+			$flag = 1;
 		}
-		
 	}
 	
+	if($flag == 0){
+		echo "No result.";
+	}
 	
 	?>
 
