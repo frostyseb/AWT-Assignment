@@ -75,7 +75,7 @@ if($pageWasRefreshed ) {
 	<script src="vendor/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 <?php include 'simpleNav.php';?>
-
+<link rel="stylesheet" href="src/css/dashboard.css">
 <body>
 	<!------ Include the above in your HEAD tag ---------->
 

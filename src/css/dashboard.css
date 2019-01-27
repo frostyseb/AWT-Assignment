@@ -1,0 +1,29 @@
+body {
+    background-color: #303136;
+}
+
+.nav-tabs {
+    background-color: #303136;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.tab-content {
+    background-color: #303136;
+    color: #fff;
+    padding: 5px
+}
+
+.nav-tabs>li>a {
+    border: medium none;
+    padding: 1rem;
+}
+
+.nav-tabs>li>a:hover {
+    background-color: #DEE4E7 !important;
+    border: medium none;
+    border-radius: 10;
+    color: #161616;
+}
