@@ -10,6 +10,12 @@
 	
 	<!--Bootstrap js-->
 	<?php include 'includes/bootstrapH.inc.php'; ?>
+	
+	<!--Google font style-->
+	<link href="https://fonts.googleapis.com/css?family=Alegreya|Exo" rel="stylesheet">
+	
+	<!--CSS Stylesheets-->
+	<link rel="stylesheet" href="src/css/search_page.css" type="text/css">
 
 </head>
 
@@ -18,6 +24,8 @@
 <body>
 
 	<?php
+	echo "<br><h1 class='resultTitle'>Search Results</h1><br>";
+	
 	$query = $_POST["clubs"];
 	$query = htmlspecialchars($query);
 	$query = strtolower($query);
@@ -29,7 +37,7 @@
 	
 	foreach($xml->club as $name) {
         if (stristr($query, substr($name, 0, $len))) {
-			echo "<div class='result'><a>" . $name . "</a></div><br><br>";
+			echo "<div class='result'><a href='#'>" . $name . "</a></div><br><br>";
 			$flag = 1;
 		}
 	}

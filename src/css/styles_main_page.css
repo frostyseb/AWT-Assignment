@@ -50,3 +50,7 @@
 .list-item:hover{
 	background-color: lightskyblue;
 }
+
+.backTop{
+	clear:both;
+}

@@ -1,12 +1,11 @@
 .result{
-	font-family: 'Alegreya', serif;
-	font-size:1em;
+	font-family: 'Exo', sans-serif;
+	font-size:1.5em;
 	text-align:center;
 	width:50%;
-	background-color:lightblue;
+	background-color:#61ECFF;
 	margin:auto;
-	padding:1em;
-	display:none;
+	padding:2em;
 }
 
 .result a{
@@ -15,6 +14,7 @@
 
 .result a:hover{
 	text-decoration:none;
+	color:#5D5D5D;
 }
 
 .resultTitle{

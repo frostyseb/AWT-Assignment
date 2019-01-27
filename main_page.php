@@ -185,6 +185,7 @@
 
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 
+	<p class="backTop"><a href="#top">Back to Top</a></p>
 </body>
 
 <script>
