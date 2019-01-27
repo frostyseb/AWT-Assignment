@@ -12,8 +12,9 @@
 	// define variables and set to empty values
 	$id = $givenName = $familyName = $email = $gender = "";
 
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$id = $_POST["id"];
 	$givenName = $_POST["givenName"];
 	$familyName = $_POST["familyName"];
@@ -42,14 +43,14 @@
     header('Location: '.$_SERVER['REQUEST_URI']);
 }
 
-$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+/*$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
 
 if($pageWasRefreshed ) {
 
 
 } else {
    //do nothing;
-}
+}*/
 
  ?>
 <!DOCTYPE html>
@@ -104,7 +105,7 @@ if($pageWasRefreshed ) {
 						<div class="col-md-9">
 							<table class="table table-hover table-bordered">
 								<tbody>
-									<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method = "POST" id = "updateUser">
+									<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "POST" id = "updateUser">
 										<tr>
 											<td>ID</td>
 											<td class="">
@@ -183,14 +184,14 @@ if($pageWasRefreshed ) {
 												<div class="info">
 													<?php echo $_SESSION['gender']?>
 													<?php 
-										$male = $female = "";
-										if($_SESSION['gender'] == 'Female'){
-											$female = "checked";
-										}else if($_SESSION['gender'] == 'Male'){
-											$male = "checked";
-										}
-
-									?>
+														$male = $female = "";
+														if($_SESSION['gender'] == 'Female'){
+															$female = "checked";
+														}
+														else if($_SESSION['gender'] == 'Male'){
+															$male = "checked";
+														}
+													?>
 													<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
 												</div>
 												<div class="input-group mb-3">
@@ -253,8 +254,8 @@ if($pageWasRefreshed ) {
 								<tbody>
 									<tr>
 										<td>Name</td>
-										<td class="">
-											<div class="">
+										<td class="table-col">
+											<div class="info-cca">
 												<?php echo $_SESSION['givenName']." ". $_SESSION['familyName']?>
 												<i class='fa fa-lg fa-fw'></i>
 											</div>
@@ -263,8 +264,6 @@ if($pageWasRefreshed ) {
 												<input type="text" value="<?php echo $_SESSION['givenName']." ". $_SESSION['familyName']?>" class="form-control"
 												 placeholder="" aria-label="ID" aria-describedby="basic-addon2" name="name" id="name">
 												<div class="input-group-append">
-													<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
-													<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 												</div>
 											</div>
 										</td>
@@ -272,70 +271,70 @@ if($pageWasRefreshed ) {
 									</tr>
 									<tr>
 										<td>First Club</td>
-										<td class="">
-											<div class="">
+										<td class="table-col">
+											<div class="info-cca">
 												<?php echo $_SESSION['first_club']?>
 											</div>
 
 											<div class="input-group mb-3">
-												<input value="" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
+												<input value="<?php echo $_SESSION['first_club']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
 												 name="first_club" id="first_club">
 												<div class="input-group-append">
-													<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
-													<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 												</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>Second Club</td>
-										<td class="">
-											<div class="">
+										<td class="table-col">
+											<div class="info-cca">
 												<?php echo $_SESSION['second_club']?>
 											</div>
 
 											<div class="input-group mb-3">
-												<input value="" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
+												<input value="<?php echo $_SESSION['second_club']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
 												 name="second_club" id="second_club">
 												<div class="input-group-append">
-													<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
-													<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 												</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>Third Club</td>
-										<td class="">
-											<div class="">
+										<td class="table-col">
+											<div class="info-cca">
 												<?php echo $_SESSION['third_club']?>
 											</div>
 
 											<div class="input-group mb-3">
-												<input value="" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
+												<input value="<?php echo $_SESSION['third_club']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
 												 name="third_club" id="third_club">
 												<div class="input-group-append">
-													<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
-													<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 												</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>Total CCA hours</td>
-										<td class="">
-											<div class="">
+										<td class="table-col">
+											<div class="info-cca">
 												<?php echo $_SESSION['total_cca']?>
 											</div>
 
 											<div class="input-group mb-3">
-												<input value="" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
+												<input value="<?php echo $_SESSION['total_cca']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
 												 name="total_cca" id="total_cca">
 												<div class="input-group-append">
-													<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
-													<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
 												</div>
 											</div>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<button class="btn btn-success btn-edit" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i><div class="btn-value">Edit</div></button>
+												</a>
+											</form>
 										</td>
 									</tr>
 								</tbody>
