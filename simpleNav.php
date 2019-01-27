@@ -68,8 +68,7 @@
     </ul>
     <form id="searchForm" autocomplete="off" onsubmit="return validation()" method="POST" name="searchForm" action="search.php">
       <div class="autocomplete" style="width:300px;">
-        <input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)"
-          required>
+        <input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)">
       </div>
       <button type="submit" form="searchForm" id="searchBtn"><i class="fa fa-search"></i></button>
       <div id="hintText"></div>
