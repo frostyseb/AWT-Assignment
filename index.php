@@ -12,8 +12,9 @@
 	// define variables and set to empty values
 	$id = $givenName = $familyName = $email = $gender = "";
 
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$id = $_POST["id"];
 	$givenName = $_POST["givenName"];
 	$familyName = $_POST["familyName"];
@@ -42,14 +43,14 @@
     header('Location: '.$_SERVER['REQUEST_URI']);
 }
 
-$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+/*$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
 
 if($pageWasRefreshed ) {
 
 
 } else {
    //do nothing;
-}
+}*/
 
  ?>
 <!DOCTYPE html>
@@ -104,7 +105,7 @@ if($pageWasRefreshed ) {
 						<div class="col-md-9">
 							<table class="table table-hover table-bordered">
 								<tbody>
-									<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method = "POST" id = "updateUser">
+									<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "POST" id = "updateUser">
 										<tr>
 											<td>ID</td>
 											<td class="">

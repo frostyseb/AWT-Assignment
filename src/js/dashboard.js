@@ -35,7 +35,7 @@ $(document).ready(
     function() {
         copyToInput();
         $(".navbar-collapse").hide();
-        // $(".input-group").hide();
+        $(".input-group").hide();
         $(".info").children("i").removeClass("fa-pencil-square-o");
     }
 )
@@ -63,7 +63,6 @@ $(".btn-update").click(
                 $regExp = $regexid;
                 errorMsg = "1. The id should be integer\n2. The length of the id should be 3 - 16 digit";
                 break;
-            case 'givenName':
             case 'familyName':
             case 'firstClub':
             case 'secondClub':
