@@ -58,6 +58,9 @@ if($pageWasRefreshed ) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
 	<title>Login with Google</title>
 	<!-- Google Api -->
@@ -74,7 +77,26 @@ if($pageWasRefreshed ) {
 </head>
 <?php include 'simpleNav.php';?>
 <body>
-	<div class="container" style ="margin-top:100px;">
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#Profile">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="Profile" class="container tab-pane active"><br>
+      <h3>Profile</h3>
+      <div class="container" style ="margin-top:100px;">
 		<div class="row">
 			<div class="col-md-3">
 				<img style="width:80%;" src="<?php echo $_SESSION['picture']?>">
@@ -152,38 +174,6 @@ if($pageWasRefreshed ) {
 							</td>
 						</tr>
 						<tr>
-							<td>Second Club</td>
-							<td class =  "table-col">
-								<div class="info">
-									<?php echo $_SESSION['second_club']?>
-									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
-								</div>
-								<div class="input-group mb-3">
-									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="secondClub" id ="secondClub">
-									<div class="input-group-append">
-										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
-										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>Third Club</td>
-							<td class =  "table-col">
-								<div class="info">
-									<?php echo $_SESSION['third_club']?>
-									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
-								</div>
-								<div class="input-group mb-3">
-									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="thirdClub" id ="thirdClub">
-									<div class="input-group-append">
-										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
-										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
 							<td>Gender</td>
 							<td class = "table-col gender-tab">
 								<div class="info">
@@ -245,6 +235,18 @@ if($pageWasRefreshed ) {
 			</div>
 		</div>
 	</div>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>
+	
 </body>
 <style>
 /* The container */
