@@ -26,11 +26,11 @@
         'oProvider'=> 'google',
         'oUid'     => $id,
         'fName'    => $givenName,
-        'lName'     => $familyName,
-        'email'         => $email,
-        'gender'        => $gender,
-        'locale'        => 'en',
-		'picture'       => $_SESSION['picture']
+        'lName'    => $familyName,
+        'email'    => $email,
+        'gender'   => $gender,
+        'locale'   => 'en',
+		'picture'  => $_SESSION['picture']
 
 	);
 	
@@ -40,6 +40,15 @@
 	$user->fetchUser();
 
     header('Location: '.$_SERVER['REQUEST_URI']);
+}
+
+$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+
+if($pageWasRefreshed ) {
+
+
+} else {
+   //do nothing;
 }
 
  ?>
@@ -143,15 +152,30 @@
 							</td>
 						</tr>
 						<tr>
-							<td>First Club</td>
-							<td class = "table-col">
+							<td>Second Club</td>
+							<td class =  "table-col">
 								<div class="info">
-									<?php echo $_SESSION['first_club']?>
+									<?php echo $_SESSION['second_club']?>
 									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
 								</div>
-								
 								<div class="input-group mb-3">
-									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="firstClub" id ="firstClub">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="secondClub" id ="secondClub">
+									<div class="input-group-append">
+										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
+										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Third Club</td>
+							<td class =  "table-col">
+								<div class="info">
+									<?php echo $_SESSION['third_club']?>
+									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
+								</div>
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="thirdClub" id ="thirdClub">
 									<div class="input-group-append">
 										<button class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
 										<button class="btn btn-danger cancelBtn" type="button"><i class='fa fa-remove fa-lg fa-fw'></i></button>
@@ -164,13 +188,22 @@
 							<td class = "table-col gender-tab">
 								<div class="info">
 									<?php echo $_SESSION['gender']?>
+									<?php 
+										$male = $female = "";
+										if($_SESSION['gender'] == 'Female'){
+											$female = "checked";
+										}else if($_SESSION['gender'] == 'Male'){
+											$male = "checked";
+										}
+
+									?>
 									<i class='fa fa-pencil-square-o fa-lg fa-fw'></i>
 								</div>
 								<div class="input-group mb-3">
 									<!--<input type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2" name ="gender" id ="gender">-->
 									<div class="form-check form-check-inline">
 										<label class="radio-container">Male
-											<input class ="" type="radio" name="gender" class="" id ="male" value = "M">
+											<input class ="" <?php echo $male?> type="radio" name="gender" class="" id ="male" value = "M">
 											<span class="checkmark"></span>											
 										</label>
 									</div>
@@ -180,9 +213,10 @@
 											<span class="checkmark"></span>
 										</label>
 									</div>-->
+
 									<div class="form-check form-check-inline">
 										<label class = "radio-container">Female									
-											<input class ="" type="radio" name="gender" class="" id ="female" value = "F">
+											<input class <?php echo $female?> ="" type="radio" name="gender" class="" id ="female" value = "F">
 											<span class="checkmark"></span>
 										</label>
 									</div>

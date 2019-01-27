@@ -1,8 +1,8 @@
 /*
  * Initialize constant
  */
-let hideTime = 600;
-let showTime = 600;
+let hideTime = 500;
+let showTime = 500;
 let toggleTime = 300;
 let delayTime = 600;
 
@@ -49,14 +49,14 @@ $(document).ready(
 
 $(".btn-update").click(
     function() {
-        // console.log("updateBtn Clicked");
+        console.log("updateBtn Clicked");
         var tableCol = $(this).parents(".table-col");
         var input = tableCol.children(".input-group").find("input:text");
         var infoTabs = tableCol.find(".info");
         var $regExp;
         var errorMsg;
 
-        //console.log(input.attr("name"));
+        console.log(input.attr("name"));
 
         switch (input.attr("name")) {
             case 'id':
@@ -66,6 +66,8 @@ $(".btn-update").click(
             case 'givenName':
             case 'familyName':
             case 'firstClub':
+            case 'secondClub':
+            case 'thirdClub':
                 $regExp = $regexname;
                 errorMsg = "1. The name should be all letter\n2. The length of the name should be 3 - 16 letter";
                 break;

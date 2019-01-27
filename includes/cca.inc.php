@@ -1,7 +1,7 @@
 <?php
 
 class Cca extends Dbh{
-    private $tableName = " cca ";
+    private $tableName = "cca";
     private $ccaDataArray = array();
 
     private $uid;
@@ -16,9 +16,9 @@ class Cca extends Dbh{
 
     function __construct(){
         $this->uid = $_SESSION['id'];
-        $selectData = "SELECT * FROM" . $this->tableName.
-        "WHERE uid=?";
-        echo "constructed with ".$this->uid;
+        $selectData = "SELECT * FROM " . $this->tableName.
+        " WHERE uid=?";
+        //echo "constructed with ".$this->uid;
         
     }
 
@@ -46,17 +46,14 @@ class Cca extends Dbh{
         if($stmt->rowCount()){
             while($row = $stmt->fetch()){
                 $this->uid = $row['uid'];
-               $this->first_club = $row['first_club'];
-               $this->second_club = $row['second_club'];
-               $this->third_club = $row['third_club'];
-               $this->total_cca = $row['total_cca'];
-              // echo"<pre>". var_dump($row)."</pre>";
+                $this->first_club = $row['first_club'];
+                $this->second_club = $row['second_club'];
+                $this->third_club = $row['third_club'];
+                $this->total_cca = $row['total_cca'];
+                //echo "<pre>"; var_dump($row);
             }
            
         }
         $this->setSession();
-        
     }
-
-
 }
