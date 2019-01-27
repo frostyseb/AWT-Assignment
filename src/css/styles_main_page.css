@@ -31,16 +31,6 @@
 	margin-left: 19%;
 }
 
-#news {
-	width: auto; 
-	height: 300px; 
-	background-color: lightblue;
-}
-  
-#news-item {
-	margin:20px 150px 20px 150px;
-}
-
 .list-item {
 	padding: 1em;
 	width: 70%;
@@ -78,6 +68,8 @@
 	padding-bottom:1em;
 	text-align:center;
 	margin:0;
+	position:absolute;
+	bottom:0;
 }
 
 .links a{
