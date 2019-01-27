@@ -14,7 +14,8 @@
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Indie+Flower|Comfortaa|Special+Elite" rel="stylesheet">
 
-	<!--Bootstrap CSS-->
+    <!--Bootstrap CSS-->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -34,51 +35,77 @@
 <script src="suggest.js"></script>
 
 <body>
-
-    <table class="table" id="organize">
-        <thead>
+    <div id="app" style="margin:50px auto">
+        <main class="py-8">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="card">
+                            <div class="card-header bg-primary"><b>Event Handler</b></div>
+                            <div class="card-body" style="background-color:lightskyblue;">
+    <table class="table table-responsive-md table-sm table-bordered" id="organize">
+        <thead class="bg-primary">
             <tr>
             <th>Quest ID</th>
+            <th>Name</th>
             <th>Course</th>
-            <th>Intake</th>
             <th>Quest Email</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             <tr class="row1">
-            <td>Testing</td>
-            <td>Testing</td>
-            <td>Testing</td>
-            <td>Testing</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
             </tr>
         </tbody>
     </table>
 
     <span>
-        <button id="add_row">Add a Row</button>
+        <button id="add_row" class="btn btn-danger" style="float:right;"> + </button>       
+        <button class="btn btn-primary" id="submit">Submit</button>
     </span>
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--Scripts for the table-->
+    <!--The submit button is to show on the console log [WIP]-->
     <script>
         $('#organize').SetEditable({
-            $addButton: $('#add_row')
-        });
-
-        var data = TableToCSV('#organize',',');
-
-        $('#organize').SetEditable({
             $addButton: $('#add_row'),
-            columnsEd: null
-        });
-
-        $('#organize').SetEditable({
+            columnsEd: null,
             onEdit: function() {}, 
             onDelete: function() {}, 
             onBeforeDelete: function() {},
             onAdd: function() {} 
         });
-    </script>
 
-    
+        $('#submit').on('click',function() {
+            var td = TableToCSV('organize', ',');
+            console.log(td);
+            var lines = td.split("\n");
+            var data_value = [];
+            for(i=0;i<lines.length;i++)
+            {
+                data_value[i] = lines[i].split(",");
+            }
+
+            for(i=0;i<data_value.length;i++)
+            {
+                if(data_value[i]>1)
+                {
+                    console.log(data_value[i][2]);
+                    console.log(data_value[i].length);
+                }
+
+            }
+        });
+    </script>
 
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 
