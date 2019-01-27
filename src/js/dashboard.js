@@ -64,6 +64,7 @@ $(".btn-update").click(
                 errorMsg = "1. The id should be integer\n2. The length of the id should be 3 - 16 digit";
                 break;
             case 'familyName':
+            case 'givenName':
             case 'firstClub':
             case 'secondClub':
             case 'thirdClub':

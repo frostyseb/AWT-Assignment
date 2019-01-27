@@ -15,30 +15,32 @@
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$id = $_POST["id"];
-	$givenName = $_POST["givenName"];
-	$familyName = $_POST["familyName"];
-	$email = $_POST["email"];
-	$gender = $_POST["gender"];
-
-	//var_dump($gender);
-
-	$userDataArray = array(
-        'oProvider'=> 'google',
-        'oUid'     => $id,
-        'fName'    => $givenName,
-        'lName'    => $familyName,
-        'email'    => $email,
-        'gender'   => $gender,
-        'locale'   => 'en',
-		'picture'  => $_SESSION['picture']
-
-	);
-	
-	$user = new User;
-	$finalUserData = $user->checkUser($userDataArray);
-	$user->updateGender($gender);
-	$user->fetchUser();
+		if(isset($_POST['profileForm'])){
+			$id = $_POST["id"];
+			$givenName = $_POST["givenName"];
+			$familyName = $_POST["familyName"];
+			$email = $_POST["email"];
+			$gender = $_POST["gender"];
+		
+			//var_dump($gender);
+		
+			$userDataArray = array(
+				'oProvider'=> 'google',
+				'oUid'     => $id,
+				'fName'    => $givenName,
+				'lName'    => $familyName,
+				'email'    => $email,
+				'gender'   => $gender,
+				'locale'   => 'en',
+				'picture'  => $_SESSION['picture']
+		
+			);
+			
+			$user = new User;
+			$finalUserData = $user->checkUser($userDataArray);
+			$user->updateGender($gender);
+			$user->fetchUser();
+		}
 
     header('Location: '.$_SERVER['REQUEST_URI']);
 }
@@ -106,6 +108,7 @@ if($pageWasRefreshed ) {
 							<table class="table table-hover table-bordered">
 								<tbody>
 									<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "POST" id = "updateUser">
+										<input type="hidden" name="profileForm" value ="SET">
 										<tr>
 											<td>ID</td>
 											<td class="">
@@ -332,8 +335,8 @@ if($pageWasRefreshed ) {
 									<tr>
 										<td></td>
 										<td>
-											<button class="btn btn-success btn-edit" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i><div class="btn-value">Edit</div></button>
-												</a>
+											<button id="club-btn" class="btn btn-success btn-update" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i>Update</button>
+											<button class="btn btn-success btn-edit" type="button"><i class='fa fa-pencil-square-o fa-lg fa-fw'></i><div style="display:inline;" class="btn-value">Edit</div></button>
 											</form>
 										</td>
 									</tr>
@@ -352,71 +355,7 @@ if($pageWasRefreshed ) {
 	</div>
 
 </body>
-<style>
-	/* The container */
-	.radio-container {
-		display: block;
-		position: relative;
-		padding-left: 35px;
-		margin-bottom: 12px;
-		cursor: pointer;
-		font-size: 22px;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-
-	/* Hide the browser's default radio button */
-	.radio-container input {
-		position: absolute;
-		opacity: 0;
-		cursor: pointer;
-	}
-
-	/* Create a custom radio button */
-	.checkmark {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 25px;
-		width: 25px;
-		background-color: #eee;
-		border-radius: 50%;
-	}
-
-	/* On mouse-over, add a grey background color */
-	.radio-container:hover input~.checkmark {
-		background-color: #ccc;
-	}
-
-	/* When the radio button is checked, add a blue background */
-	.radio-container input:checked~.checkmark {
-		background-color: #2196F3;
-	}
-
-	/* Create the indicator (the dot/circle - hidden when not checked) */
-	.checkmark:after {
-		content: "";
-		position: absolute;
-		display: none;
-	}
-
-	/* Show the indicator (dot/circle) when checked */
-	.radio-container input:checked~.checkmark:after {
-		display: block;
-	}
-
-	/* Style the indicator (dot/circle) */
-	.radio-container .checkmark:after {
-		top: 9px;
-		left: 9px;
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		background: white;
-	}
-</style>
+<link rel="stylesheet" href="src\css\radio_button.css">
 
 <body>
 
