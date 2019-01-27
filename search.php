@@ -27,13 +27,13 @@
 	
 	foreach($xml->club as $name) {
         if (stristr($query, substr($name, 0, $len))) {
-			echo "<a>" . $name . "</a><br>";
+			echo "<div class='result'><a>" . $name . "</a></div><br><br>";
 			$flag = 1;
 		}
 	}
 	
 	if($flag == 0){
-		echo "No result.";
+		echo "<div class='result'>No Result</div>";
 	}
 	
 	?>

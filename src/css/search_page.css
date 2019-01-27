@@ -1,0 +1,23 @@
+.result{
+	font-family: 'Alegreya', serif;
+	font-size:1em;
+	text-align:center;
+	width:50%;
+	background-color:lightblue;
+	margin:auto;
+	padding:1em;
+	display:none;
+}
+
+.result a{
+	color:#000;
+}
+
+.result a:hover{
+	text-decoration:none;
+}
+
+.resultTitle{
+	font-family: 'KoHo', sans-serif;
+	text-align:center;
+}
