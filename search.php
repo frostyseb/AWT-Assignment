@@ -57,6 +57,19 @@
 		});
 	</script>
 	
+	<div class="footer">
+		<h4>Stay Connected</h4>
+		<div class="links">
+			<a href="https://www.facebook.com/QuestInternationalUniversityPerak/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+			<a href="https://twitter.com/qiup_edu?lang=en"  target="_blank"><i class="fa fa-twitter-square"></i></a>
+			<a href="https://www.instagram.com/qiup_edu/?hl=en"  target="_blank"><i class="fa fa-instagram"></i></a>
+			<a href="http://www.qiup.edu.my/" target="_blank"><i class="fa fa-globe" ></i></a>
+			<a href="mailto:enquiries@qiup.edu.my" target="_blank"><i class="fa fa-envelope-o"></i></a>
+			<a href="tel:+6052490500" target="_blank"><i class="fa fa-phone"></i></a>
+		</div> <!-- END links -->
+		<p>Copyright 2019 &copy; Tan, Seb, Jason, Reshmi</p>
+	</div> <!-- END footer -->
+	
 </body>
 
 </html>
