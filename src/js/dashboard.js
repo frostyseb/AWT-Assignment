@@ -35,7 +35,7 @@ $(document).ready(
     function() {
         copyToInput();
         $(".navbar-collapse").hide();
-        $(".input-group").hide();
+        // $(".input-group").hide();
         $(".info").children("i").removeClass("fa-pencil-square-o");
     }
 )
@@ -91,7 +91,6 @@ $(".btn-update").click(
             tableCol.children(".input-group").hide(hideTime).delay(delayTime);
             tableCol.children(".info").show(showTime).delay(delayTime);
             alert(input.val() + " has been updated!");
-            copyToInput();
             $("#updateUser").submit();
         }
     }
@@ -174,3 +173,45 @@ $(".navbar-toggler-icon").click(
         $(".navbar-collapse").toggle(toggleTime);
     }
 )
+
+/*
+ *======================================Club Column new script ===========================
+ */
+
+/*
+ * Copy the info in the division where class is info to the input:text(hidden input text field);
+ */
+
+function copyToInputCca() {
+    var inputGroup = $(".table-col").find("input:text");
+    inputGroup.each(
+            function() {
+                var infoText = $.trim($(this).parents(".table-col").find(".info-cca").text());
+                $(this).val(infoText);
+                // console.log($(this).val());
+            }
+        )
+        //console.log("copyToInput run!");
+}
+
+let isEdit = true;
+$(".btn-edit").click(
+    function() {
+        copyToInputCca();
+        console.log("btn-edit clicked!");
+        $(".info-cca").toggle(toggleTime);
+        var inputGroup = $("#club").find(".input-group");
+        inputGroup.toggle(toggleTime);
+        if (isEdit == true) {
+            $(this).removeClass("btn-success").addClass("btn-danger");
+            $(this).children("i").removeClass("fa-pencil-square-o").addClass("fa-remove");
+            $(this).children(".btn-value").text("Cancel");
+            isEdit = false;
+        } else {
+            $(this).removeClass("btn-danger").addClass("btn-success");
+            $(this).children("i").removeClass("fa-remove").addClass("fa-pencil-square-o");
+            $(this).children(".btn-value").text("Edit");
+            isEdit = true;
+        }
+
+    })
