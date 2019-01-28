@@ -35,7 +35,7 @@
 <body>
 	
 	<div class="form_box">
-		<a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>
+		<a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png" width="150em" height="150em"></a>
 		<h1 id="login_title">Quest International University Perak</h1>
 		<h2 id="login_portal">CCA Portal</h2>
 		<p class="form_element">Login now to discover upcoming CCA events & activities</p>
