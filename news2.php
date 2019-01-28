@@ -11,6 +11,9 @@
 	<!--Bootstrap js-->
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 	
+	<!--Bing Maps API-->
+	<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[AhaTsBSRH-3R1UouWUX8JfrJ__a8V7Vig2rdgB1wpYI7QbyD5DocHRKdKNUDqJi9]' async defer></script>
+	
 	<!--Title Bar Icon-->
 	<link rel="icon" type="image/ico" href="src/assets/quest_logo.png">
 	
@@ -71,9 +74,27 @@
 					<li>The candidate should bring QIUP student identification card during the nomination day.</li>
 				</ol>
 				<b>“ARISE, AWAKE, ACHIEVE”</b>
+				
+				<br><br>
+				
+				Location on &nbsp;<i class="fa fa-map"></i> Bing Maps<br>
+				<div id="myMap" style='position:relative;width:600px;height:400px;'></div>
 			</p>
 		</div><!--END para-->
 	</div><!--END conference-->
+	
+	<script type='text/javascript'>
+		function GetMap()
+		{
+			var map = new Microsoft.Maps.Map('#myMap',{
+
+			credentials: 'AhaTsBSRH-3R1UouWUX8JfrJ__a8V7Vig2rdgB1wpYI7QbyD5DocHRKdKNUDqJi9',
+			center: new Microsoft.Maps.Location(4.583510, 101.093020),
+			mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+			zoom: 18
+			});
+		}
+	</script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>

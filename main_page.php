@@ -47,7 +47,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	<h3 class="ev">News & Updates</h3>
+	<h3 class="ev" id="top">News & Updates</h3>
 
 	<!--News Carousel-->
 	<div id="news" class="carousel slide my-carousel" data-ride="carousel">
@@ -192,7 +192,7 @@
 
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 
-	<p class="backTop"><a href="#top"><i class="fa fa-arrow-up"></i> Back to Top</a></p>
+	<p class="backTop"><a href="#top"><i class="fa fa-arrow-up"></i>Back to Top</a></p>
 	
 	<div class="footer">
 		<h4>Stay Connected</h4>

@@ -23,6 +23,12 @@
 	text-align:center;
 }
 
+#myMap {
+	position:relative;
+	width:600px;
+	height:400px;
+}
+
 .footer{
 	clear:right;
 	width:100%;
