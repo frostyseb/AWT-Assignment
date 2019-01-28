@@ -22,7 +22,7 @@
 <?php include 'simpleNav.php';?>
 
 <body>
-	<br><h1 class='resultTitle'>Search Results</h1><br>
+	<br><br><br><br><br><br><h1 class='resultTitle'>Search Results</h1><br>
 	
 	<?php
 	
@@ -35,6 +35,8 @@
 	$flag = 0;
 	
 	$xml = simplexml_load_file("clubs_societies.xml") or die("Error: Cannot create object");
+	
+	echo "<br>";
 	
 	foreach($xml->club as $name) {
 		if (stristr($query, substr($name, 0, $len))) {
