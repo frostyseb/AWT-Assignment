@@ -3,19 +3,18 @@
 }
 
 .conference img{
-	width:35em;
-	height:50em;
 	margin-bottom:2em;
 }
 
 .pimg {
 	text-align:center;
+	font-family:'KoHo', sans-serif;
 }
 
 .para {
 	text-align:justify;
 	margin:2em;
-	font-family:KoHo;
+	font-family:'KoHo', sans-serif;
 }
 
 .conference h1 {

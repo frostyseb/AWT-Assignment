@@ -63,10 +63,10 @@
 				<a href="news1.php" title="Conference on Digital Marketing and Entrepreneurship 2019"><img class="d-block w-100" src="src/assets/news1.png"></a>
 			</div> <!-- END carousel-item active -->
 			<div class="carousel-item">
-				<img class="d-block w-100" src="src/assets/news2.png">
+				<a href="news2.php" title="Student Representative Council Nomination 2019"><img class="d-block w-100" src="src/assets/news2.png"></a>
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
-				<img class="d-block w-100" src="src/assets/news3.png">
+				<a href="news3.php" title="Fireside Chat with Selina Boay: A Corporate High-Flyer Who Threw It All"><img class="d-block w-100" src="src/assets/news3.png"></a>
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
 				<img class="d-block w-100" src="src/assets/news4.png">

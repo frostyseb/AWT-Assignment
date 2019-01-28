@@ -28,7 +28,7 @@
 	<div class="conference">
 		<h1>Conference on Digital Marketing and Entrepreneurship 2019</h1>
 		<br>
-		<p class="pimg"><img src="src/assets/conference.jpg"></p>
+		<p class="pimg"><img src="src/assets/conference.jpg" width="500px" height="700px"></p>
 		<div class="para">
 			<p>
 				Quest International University Perak is hosting its first ever conference on Digital Marketing and Entrepreneurship leaded by several experienced speakers.
