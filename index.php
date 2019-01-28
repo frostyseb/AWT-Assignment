@@ -385,10 +385,11 @@ if($pageWasRefreshed ) {
 	<!-- Load jQuery -->
 	<!--<script src="vendor/node_modules/initjQuery.js"></script>-->
 	<!-- script for edit the form -->
-
-	<script>
-
-	</script>
+<style>
+body{
+	margin-top:150px;
+}
+</style>
 </body>
 
 </html>
