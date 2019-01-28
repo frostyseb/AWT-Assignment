@@ -31,6 +31,8 @@
 	
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <?php include 'simpleNav.php';?>
@@ -52,7 +54,24 @@
 			<img src="src/assets/hex5.jpg">
 		</div>
 
-		
+		<center><div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4"></div></center>
+		<?php
+ 
+			if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
+			{
+					$secret = '6Le-P40UAAAAABq4uf5hBye0uBbgn-nl95N3qTUa';
+					$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+					$responseData = json_decode($verifyResponse);
+					if($responseData->success)
+					{
+						$succMsg = 'Your contact request have submitted successfully.';
+					}
+					else
+					{
+						$errMsg = 'Robot verification failed, please try again.';
+					}
+			}
+		?>
 		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
 	</div> <!-- END form_box -->
 	
