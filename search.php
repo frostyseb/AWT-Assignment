@@ -44,7 +44,7 @@
 	
 	foreach($xml->club as $name) {
 		if (stristr($query, substr($name, 0, $len))) {
-			echo "<div class='result'><a href='#'>" . $name . "</a></div><br><br>";
+			echo "<div class='result'><a href='#'>" . $name . "</a></div><br>";
 			$flag = 1;
 		}
 	}
