@@ -58,22 +58,19 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<div id="news-item">
-					<b>BREAKING NEWS</b>
-					<p>Free CCA hours for everybody</p>
-				</div>
+				<img class="d-block w-100" src="src/assets/news1.png">
 			</div> <!-- END carousel-item active -->
 			<div class="carousel-item">
-				<div id="news-item">Insert news here</div>
+				<img class="d-block w-100" src="src/assets/news2.png">
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
-				<div id="news-item">Insert news here</div>
+				<img class="d-block w-100" src="src/assets/news3.png">
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
-				<div id="news-item">Insert news here</div>
+				<img class="d-block w-100" src="src/assets/news4.png">
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
-				<div id="news-item">Insert news here</div>
+				<img class="d-block w-100" src="src/assets/news5.png">
 			</div> <!-- END carousel-item -->
 		</div> <!-- END carousel-inner -->
 		<a class="carousel-control-prev" href="#news" role="button" data-slide="prev">
@@ -95,6 +92,8 @@
 			<li data-target="#events" data-slide-to="0" class="active"></li>
 			<li data-target="#events" data-slide-to="1" class=""></li>
 			<li data-target="#events" data-slide-to="2" class=""></li>
+			<li data-target="#events" data-slide-to="3" class=""></li>
+			<li data-target="#events" data-slide-to="4" class=""></li>
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
@@ -105,6 +104,12 @@
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
 				<img class="d-block w-100" src="src/assets/pic3.png" alt="Third slide">
+			</div> <!-- END carousel-item -->
+			<div class="carousel-item">
+				<img class="d-block w-100" src="src/assets/pic4.png" alt="Fourth slide">
+			</div> <!-- END carousel-item -->
+			<div class="carousel-item">
+				<img class="d-block w-100" src="src/assets/pic5.png" alt="Fifth slide">
 			</div> <!-- END carousel-item -->
 		</div> <!-- END carousel-inner -->
 		<a class="carousel-control-prev" href="#events" role="button" data-slide="prev">

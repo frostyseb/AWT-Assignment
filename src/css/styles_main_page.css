@@ -1,3 +1,15 @@
+html {
+	height:100%;
+}
+
+body {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 80px;
+}
+
 .m {
 	width:auto;
 	margin-left:10px;
@@ -29,16 +41,6 @@
 
 .clubSoc {
 	margin-left: 19%;
-}
-
-#news {
-	width: auto; 
-	height: 300px; 
-	background-color: lightblue;
-}
-  
-#news-item {
-	margin:20px 150px 20px 150px;
 }
 
 .list-item {
@@ -78,6 +80,8 @@
 	padding-bottom:1em;
 	text-align:center;
 	margin:0;
+	position:absolute;
+	bottom:0;
 }
 
 .links a{

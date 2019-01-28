@@ -35,11 +35,12 @@
 <body>
 	
 	<div class="form_box">
-		<a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png"></a>
+		<a href="http://www.qiup.edu.my" target="_blank"><img src="src\assets\quest_logo.png" width="150em" height="150em"></a>
 		<h1 id="login_title">Quest International University Perak</h1>
 		<h2 id="login_portal">CCA Portal</h2>
 		<p class="form_element">Login now to discover upcoming CCA events & activities</p>
 		
+
 		<div class="octagon" id="octagon">
 			<img src="src/assets/hex1.png">
 			<img src="src/assets/hex2.jpg">
@@ -47,6 +48,7 @@
 			<img src="src/assets/hex4.png">
 			<img src="src/assets/hex5.jpg">
 		</div>
+
 		
 		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
 	</div> <!-- END form_box -->

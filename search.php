@@ -44,7 +44,7 @@
 	}
 	
 	if($flag == 0){
-		echo "<div class='result'>No Result</div>";
+		echo "<div class='result'>No Result</div><br><br>";
 	}
 	
 	?>
