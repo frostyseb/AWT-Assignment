@@ -28,6 +28,7 @@ body {
 	padding-top:0;
 	text-align:center;
 	float: left;
+	border-right:1px solid #8B8B8B;
 }
 
 .list {

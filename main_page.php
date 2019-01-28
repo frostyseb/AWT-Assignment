@@ -47,7 +47,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	<br>
 	<h3 class="ev">News & Updates</h3>
 
 	<!--News Carousel-->
@@ -154,7 +153,7 @@
 				<a href="https://www.facebook.com/QuestInternationalUniversityPerak/">Quest International University Perak (QIUP)</a>
 			</blockquote>
 		</div> <!-- END fb-page -->
-	</div> <!-- END fb-api -->
+	</div> <!-- END fbAPI -->
 
 	<br>
 	<?php
