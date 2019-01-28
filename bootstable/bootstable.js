@@ -202,7 +202,7 @@ var $tab_en_edic = $("#" + tabId);  //Table to edit
     }
 	params.onAdd();
 }
-    /*function TableToCSV(tabId, separator) {  //Convierte tabla a CSV
+    function TableToCSV(tabId, separator) {  //Convierte tabla a CSV
     var datFil = '';
     var tmp = '';
 	var $tab_en_edic = $("#" + tabId);  //Table source
@@ -226,4 +226,4 @@ var $tab_en_edic = $("#" + tabId);  //Table to edit
         tmp = tmp + datFil + '\n';
     });
     return tmp;
-    }*/
+    }
