@@ -1,0 +1,4 @@
+CREATE TABLE event_type {
+	id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	type_name VARCHAR(256) NOT NULL
+}
