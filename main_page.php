@@ -60,7 +60,7 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="src/assets/news1.png">
+				<a href="news1.php" title="Conference on Digital Marketing and Entrepreneurship 2019"><img class="d-block w-100" src="src/assets/news1.png"></a>
 			</div> <!-- END carousel-item active -->
 			<div class="carousel-item">
 				<img class="d-block w-100" src="src/assets/news2.png">
