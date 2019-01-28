@@ -25,7 +25,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="bootstable/bootstable.js"></script>
 
-	
 	<!--CSS Stylesheet-->
 	<link rel="stylesheet" href="src/css/styles_main_page.css" type="text/css">
 
@@ -85,11 +84,25 @@
             onBeforeDelete: function() {},
             onAdd: function() {} 
         });
-    </script>
-    <script src="bootstable/jquery.tabletocsv.js"></script>
-    <script>
-        $('#submit').click(function() {
-            $('#organize').tableToCsv();
+        $('#submit').on('click',function() {
+            var td = TableToCSV('organize', ',');
+            console.log(td);
+            var ar_lines = td.split("\n");
+            var each_data_value = [];
+            for(i=0;i<ar_lines.length;i++)
+            {
+                each_data_value[i] = ar_lines[i].split(",");
+            }
+
+            for(i=0;i<each_data_value.length;i++)
+            {
+                if(each_data_value[i]>1)
+                {
+                    console.log(each_data_value[i][2]);
+                    console.log(each_data_value[i].length);
+                }
+
+            }
         });
     </script>
 
