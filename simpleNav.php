@@ -1,6 +1,6 @@
 <script src="src/js/validation.js"></script>
 
-<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark" id="top">
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark fixed-top" id="top">
  <a href="http://www.qiup.edu.my" target="_blank"><img src="src/assets/quest_logo.png" width="90em" height="90em"></a><a
     class="navbar-brand" href="main_page.php">CCA QIUP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
