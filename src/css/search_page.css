@@ -32,6 +32,12 @@ body {
 .resultTitle{
 	font-family: 'KoHo', sans-serif;
 	text-align:center;
+	margin-top:3em;
+}
+
+.resultTitleDescp{
+	font-family: 'KoHo', sans-serif;
+	text-align:center;
 }
 
 .footer{
@@ -42,7 +48,7 @@ body {
 	padding-bottom:1em;
 	text-align:center;
 	margin:0;
-	position:relative;
+	position:absolute;
 	bottom:0;
 }
 

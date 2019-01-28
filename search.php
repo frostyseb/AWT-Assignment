@@ -11,8 +11,11 @@
 	<!--Bootstrap js-->
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 	
+	<!--Title Bar Icon-->
+	<link rel="icon" type="image/ico" href="src/assets/quest_logo.png">
+	
 	<!--Google font style-->
-	<link href="https://fonts.googleapis.com/css?family=Alegreya|Exo" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya|Exo|KoHo" rel="stylesheet">
 	
 	<!--CSS Stylesheets-->
 	<link rel="stylesheet" href="src/css/search_page.css" type="text/css">
@@ -22,7 +25,8 @@
 <?php include 'simpleNav.php';?>
 
 <body>
-	<br><br><br><br><br><br><h1 class='resultTitle'>Search Results</h1><br>
+	<h1 class='resultTitle'>Search Results</h1><br>
+	<h4 class="resultTitleDescp">Click on your desired link to navigate to the related page</h4>
 	
 	<?php
 	

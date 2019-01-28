@@ -11,6 +11,9 @@
 	<!--Bootstrap js-->
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 
+	<!--Title Bar Icon-->
+	<link rel="icon" type="image/ico" href="src/assets/quest_logo.png">
+	
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Indie+Flower|Comfortaa|Special+Elite|Exo" rel="stylesheet">
 

@@ -20,6 +20,9 @@
 	
 	<?php include 'includes/bootstrapH.inc.php'; ?>
 	
+	<!--Title Bar Icon-->
+	<link rel="icon" type="image/ico" href="src/assets/quest_logo.png">
+	
 	<!--Bootstrap CSS-->
 	<link rel="stylesheet" href="tiles-transitions-slider/example/octagon.css">
 	
