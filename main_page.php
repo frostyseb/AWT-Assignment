@@ -69,10 +69,10 @@
 				<a href="news3.php" title="Fireside Chat with Selina Boay: A Corporate High-Flyer Who Threw It All"><img class="d-block w-100" src="src/assets/news3.png"></a>
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
-				<img class="d-block w-100" src="src/assets/news4.png">
+				<a href="news4.php" title="Blood Donation Campaign"><img class="d-block w-100" src="src/assets/news4.png"></a>
 			</div> <!-- END carousel-item -->
 			<div class="carousel-item">
-				<img class="d-block w-100" src="src/assets/news5.png">
+				<a href="news5.php" title="DBM Closed Bowling Tournament 2019"><img class="d-block w-100" src="src/assets/news5.png"></a>
 			</div> <!-- END carousel-item -->
 		</div> <!-- END carousel-inner -->
 		<a class="carousel-control-prev" href="#news" role="button" data-slide="prev">

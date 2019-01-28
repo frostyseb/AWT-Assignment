@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	
-	<title>Conference on Digital Marketing and Entrepreneurship 2019</title>
+	<title>DBM Closed Bowling Tournament 2019</title>
 	
 	<!--Bootstrap js-->
 	<?php include 'includes/bootstrapH.inc.php'; ?>
@@ -26,22 +26,35 @@
 
 <body>
 	<div class="conference">
-		<h1>Conference on Digital Marketing and Entrepreneurship 2019</h1>
+		<h1>DBM Closed Bowling Tournament 2019</h1>
 		<br>
-		<p class="pimg"><img src="src/assets/conference.jpg" width="500px" height="700px"></p>
+		<p class="pimg"><img src="src/assets/bowling.jpg" width="800px" height="400px"></p>
 		<div class="para">
 			<p>
-				Quest International University Perak is hosting its first ever conference on Digital Marketing and Entrepreneurship leaded by several experienced speakers.
-				The speaker include <i><b>Marcus Teoh</b>, Facebook Marketer, <b>Noor Aimi Mohd Yusoff</b>, Founder and Director of Sahi Elements Sdn. Bhd., <b>Felicia Yeow</b>, 
-				Founder of Carver's Homemade Nut Butters, <b>Mandy Leong</b>, Founder of Chriszen,</i> and <i><b>Cheong Mei Mei</b>, Business Director of Wavemaker</i>. Come 
-				engage and learn how to be a successful entrepreneur with them, and also find out their way of acheiving groundbreaking success.<br><br>
-				Details are as follows:-
+				The DBM students are organizing a DBM Closed Bowling Tournament 2019 and the details is stated in the poster attached. 
 				<ul>
-					<li>Date: 24th January 2019</li>
-					<li>Time: 9:00AM - 4:00PM</li>
-					<li>Venue: QIU Auditorium, Level 3 @ TTS</li>
+					<li>Date: 20/02/2019 (Wednesday)</li>
+					<li>Time: 4.30PM - 8.00PM</li>
+					<li>Place: Ampang Superbowl, level 3, Ipoh Parade, Perak.</li>
+					<li>Price: RM70.00 (3 persons in a team - students only);</li>
 				</ul>
-				See you there!
+				<b>**If there is a combination of staff + student in a group therefore fees is RM80.00 per team.</b><br><br>
+				Tentative:
+				<ul>
+					<li>Registration time: 4.30pm - 5.15pm</li>
+					<li>Opening and warm up: 5.20pm - 5.35pm</li>
+					<li>Roll-off: 5.40pm - 5.45pm</li>
+					<li>Medal presentation: 7.30pm - 7.45pm</li>
+					<li>Event ends: 8.00pm +/-</li>
+				</ul>
+				<b>**please be punctual and bring your own socks and please follow the rules and regulations of bowling.</b><br><br>
+				The registration forms can be collected & submitted to the pic below latest by 15/02/2019 (Friday). 
+				Registration booth will be open at the student lounge on certain days. You may contact the 
+				respective persons below for more enquiries.<br><br>
+				<i>- Jason Lok - 0165155784</i><br>
+				<i>- Harpreet Singh - 0125494601</i><br>
+				<i>- Kaliswari - 0163859065</i><br><br>
+				Hope to hear from you soon!! 
 			</p>
 		</div><!--END para-->
 	</div><!--END conference-->
