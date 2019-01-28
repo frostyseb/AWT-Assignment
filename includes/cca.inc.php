@@ -5,7 +5,7 @@ class Cca extends Dbh{
     private $ccaDataArray = array();
 
     private $uid;
-    private $first_club;
+    private $student_id;
     private $second_club;
     private $third_club;
     private $total_cca;
@@ -20,14 +20,17 @@ class Cca extends Dbh{
         " WHERE uid=?";
         //echo "constructed with ".$this->uid;
 
+        $this->insertData = "UPDATE ".$this->tableName .
+        "SET uid=? , student_id=? , second_club = ? , third_club=? , total_cca=?";
+
         $this->updateData = "UPDATE " . $this->tableName .
-        "SET first_club=? , second_club=? , third_club=? , total_cca=? WHERE uid=?";
+        "SET student_id=? , second_club=? , third_club=? , total_cca=? WHERE uid=?";
     }
 
     private function separateCcaData(){
         echo "<pre>";var_dump($this->ccaDataArray);echo"</pre>";
         $this->uid = $this->ccaDataArray['uid'];
-        $this->first_club = $this->ccaDataArray['first_club'];
+        $this->student_id = $this->ccaDataArray['student_id'];
         $this->second_club = $this->ccaDataArray['second_club'];
         $this->third_club = $this->ccaDataArray['third_club'];
         $this->total_cca = $this->ccaDataArray['total_cca'];
@@ -36,8 +39,8 @@ class Cca extends Dbh{
     public function checkCca ($ccaDataArray = array()){
         $this->ccaDataArray = $ccaDataArray;
         $this->separateCcaData();
-        $stmt = $this->connect()->prepare("UPDATE cca SET first_club=? , second_club=? , third_club=? , total_cca=? WHERE uid=?");
-        $stmt->execute([$this->first_club,$this->second_club,$this->third_club,$this->total_cca,$this->uid]);
+        $stmt = $this->connect()->prepare("INSERT INTO cca SET uid=?, student_id=? , second_club=? , third_club=? , total_cca=?");
+        $stmt->execute([$this->uid,$this->student_id,$this->second_club,$this->third_club,$this->total_cca]);
 
     }
 
@@ -46,21 +49,22 @@ class Cca extends Dbh{
     }
 
     private function setSession(){
-        $_SESSION['first_club'] = $this->first_club;
+        $_SESSION['student_id'] = $this->student_id;
         $_SESSION['second_club'] = $this->second_club;
         $_SESSION['third_club'] = $this->third_club;
         $_SESSION['total_cca'] = $this->total_cca;
     }
 
 
-    public function fetchCca(){   
+    public function fetchCca(){  
+        $this->uid = $_SESSION['id'];
         $stmt = $this->connect()->prepare("SELECT * FROM cca WHERE uid = ?");
         $stmt->execute([$this->uid]);
 
         if($stmt->rowCount()){
             while($row = $stmt->fetch()){
                 $this->uid = $row['uid'];
-                $this->first_club = $row['first_club'];
+                $this->student_id = $row['student_id'];
                 $this->second_club = $row['second_club'];
                 $this->third_club = $row['third_club'];
                 $this->total_cca = $row['total_cca'];

@@ -48,7 +48,7 @@
 
 			$clubFormData = array(
 				'uid'     => $_SESSION['id'],
-				'first_club'    => $_POST['first_club'],
+				'student_id'    => $_POST['student_id'],
 				'second_club'    => $_POST['second_club'],
 				'third_club'    => $_POST['third_club'],
 				'total_cca'   => $_POST['total_cca']
@@ -295,12 +295,12 @@ if($pageWasRefreshed ) {
 										<td>First Club</td>
 										<td class="table-col">
 											<div class="info-cca">
-												<?php echo $_SESSION['first_club']?>
+												<?php echo $_SESSION['student_id']?>
 											</div>
 
 											<div class="input-group mb-3">
-												<input value="<?php echo $_SESSION['first_club']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
-												 name="first_club" id="first_club">
+												<input value="<?php echo $_SESSION['student_id']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
+												 name="student_id" id="student_id">
 												<div class="input-group-append">
 												</div>
 											</div>

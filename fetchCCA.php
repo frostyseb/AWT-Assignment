@@ -14,6 +14,7 @@
     function fetchData(){
         $ccaData = new Cca;
         $ccaData->fetchCca();
+        dumpSession();
         
     }
 
