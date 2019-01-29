@@ -54,7 +54,9 @@
 			<img src="src/assets/hex5.jpg">
 		</div>
 
-		<center><div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4"></div></center>
+
+		
+		<center><div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4">
 		<?php
  
 			if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
@@ -65,6 +67,7 @@
 					if($responseData->success)
 					{
 						$succMsg = 'Your contact request have submitted successfully.';
+						echo "<button type='button' onclick='window.location = " .  $loginURL  . "' class='btn btn-outline-danger btn-block'><i class='fab fa-google'></i> SIGN IN WITH GOOGLE</button>";
 					}
 					else
 					{
@@ -72,7 +75,9 @@
 					}
 			}
 		?>
-		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
+		</div></center>
+		
+		
 	</div> <!-- END form_box -->
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
