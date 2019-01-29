@@ -1,5 +1,4 @@
 <?php 
-
 	if(isset($_SESSION['id'])){
 		header('Location: logout.php');
 	}
@@ -31,8 +30,10 @@
 	
 	<!--Google font style-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
-
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	
+	<!--Google Recaptcha API-->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	
 </head>
 
 <?php include 'simpleNav.php';?>
@@ -55,28 +56,26 @@
 		</div>
 
 
-		
-		<center><div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4">
-		<?php
- 
-			if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
-			{
-					$secret = '6Le-P40UAAAAABq4uf5hBye0uBbgn-nl95N3qTUa';
-					$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-					$responseData = json_decode($verifyResponse);
-					if($responseData->success)
-					{
-						$succMsg = 'Your contact request have submitted successfully.';
-					}
-					else
-					{
-						$errMsg = 'Robot verification failed, please try again.';
-					}
+		<form method="POST" onsubmit="return validateGooRe()">
+		  <div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4" data-callback="verifyCaptcha"></div>
+		  <br>
+		  <button type="submit" class="btn btn-outline-danger btn-block" id="gBtn"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
+		</form>
+
+		<script>
+			function validateGooRe() {
+				var response = grecaptcha.getResponse();
+				if(response.length == 0) {
+					alert("Please tick the recaptcha box.");
+					return false;
+				}
+				return false;
 			}
-		?>
-		</div></center>
-		
-		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
+			 
+			function verifyCaptcha() {
+				document.getElementById("gBtn").addEventListener("submit", window.location = "<?php echo $loginURL ?>");
+			}
+		</script>
 		
 	</div> <!-- END form_box -->
 	

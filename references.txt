@@ -2,3 +2,68 @@ ReCaptcha
 https://developer.salesforce.com/forums/?id=9060G000000IAi2QAG
 https://www.dreamincode.net/forums/topic/393734-enable-button-when-recaptcha/
 https://stackoverflow.com/questions/30018213/recaptcha-2-0-enable-submit-button-on-callback-if-recaptcha-successful
+
+
+
+<center><div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4">
+		<?php
+ 
+			if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
+			{
+					$secret = '6Le-P40UAAAAABq4uf5hBye0uBbgn-nl95N3qTUa';
+					$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+					$responseData = json_decode($verifyResponse);
+					if($responseData->success)
+					{
+						$succMsg = 'Your contact request have submitted successfully.';
+					}
+					else
+					{
+						$errMsg = 'Robot verification failed, please try again.';
+					}
+			}
+		?>
+		</div></center>
+		
+		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
+
+
+
+
+
+<center><div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4">
+		<?php
+ 
+			if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
+			{
+					$secret = '6Le-P40UAAAAABq4uf5hBye0uBbgn-nl95N3qTUa';
+					$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+					$responseData = json_decode($verifyResponse);
+					if($responseData->success)
+					{
+						$succMsg = 'Your contact request have submitted successfully.';
+					}
+					else
+					{
+						$errMsg = 'Robot verification failed, please try again.';
+					}
+			}
+			
+		?>
+		</div></center>
+
+
+
+<script>
+			$("form").submit(function(event) {
+
+   var recaptcha = $("#g-recaptcha-response").val();
+   if (recaptcha === "") {
+      event.preventDefault();
+      alert("Please check the recaptcha");
+   }
+});
+		</script>
+
+
+onclick="window.location = '<?php echo $loginURL ?>';"
