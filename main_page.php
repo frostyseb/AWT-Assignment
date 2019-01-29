@@ -21,6 +21,9 @@
 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
+	 
+	<!--Bootstrap for Back to Top-->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 	<!--CSS Stylesheet-->
 	<link rel="stylesheet" href="src/css/styles_main_page.css" type="text/css">
@@ -164,7 +167,77 @@
 	echo "<div class='list'>";
 	
 	foreach($xml->club as $name) {
-		echo "<div class='list-item'><b><a href='clubs.php'>" . $name . "</a></b></div>";
+		
+
+		if ($name == 'Music Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Debate Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Care Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Innovation Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Photography Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Biotech Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'International Students Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Human Resource Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Student Representative Council') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Pharmacy Students Society') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Hindu Society') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Christian Society') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Sikh Society') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Chinese Society') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Muslim Society') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'International Commerce Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Cricket Club') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Badminton Club') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Futsal &amp; Football Club') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Basketball Club') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Gamers Club') {
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Indoor Club') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
+		if ($name == 'Outdoor Club') {
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
+		}
 	}
 	
 	echo "</div></div>";
@@ -192,7 +265,23 @@
 
 	<?php include 'includes/bootstrapF.inc.php'; ?>
 
-	<p class="backTop"><a href="#top"><i class="fa fa-arrow-up"></i>Back to Top</a></p>
+	<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+	
+	<script>
+		$(window).scroll(function() {
+			if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+				$('#return-to-top').fadeIn(200);    // Fade in the arrow
+			} else {
+				$('#return-to-top').fadeOut(200);   // Else fade out the arrow
+			}
+		});
+		
+		$('#return-to-top').click(function() {      // When arrow is clicked
+			$('body,html').animate({
+				scrollTop : 0                       // Scroll to top of body
+			}, 500);
+		});
+	</script>
 	
 	<div class="footer">
 		<h4>Stay Connected</h4>
