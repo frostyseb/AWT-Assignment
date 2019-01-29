@@ -67,7 +67,6 @@
 					if($responseData->success)
 					{
 						$succMsg = 'Your contact request have submitted successfully.';
-						echo "<button type='button' onclick='window.location = " .  $loginURL  . "' class='btn btn-outline-danger btn-block'><i class='fab fa-google'></i> SIGN IN WITH GOOGLE</button>";
 					}
 					else
 					{
@@ -77,6 +76,7 @@
 		?>
 		</div></center>
 		
+		<button type="button" onclick="window.location = '<?php echo $loginURL ?>';" class="btn btn-outline-danger btn-block"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
 		
 	</div> <!-- END form_box -->
 	
