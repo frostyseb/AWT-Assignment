@@ -473,6 +473,7 @@ form,
 .masonry .entry__thumb:hover .entry__thumb-link::before {
    opacity: 1;
    visibility: visible;
+   cursor: default;
 }
 
 .masonry .entry__thumb:hover .entry__thumb-link::after {
@@ -481,6 +482,7 @@ form,
    -webkit-transform: scale(1);
    -ms-transform: scale(1);
    transform: scale(1);
+   cursor: default;
 }
 
 .masonry .entry__thumb:hover .entry__thumb-link img {
