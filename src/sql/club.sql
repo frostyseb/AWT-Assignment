@@ -3,3 +3,5 @@ CREATE TABLE club(
     club_name VARCHAR(256) NOT NULL,
     club_id VARCHAR(256) NOT NULL
 )
+
+ALTER TABLE `club_member` ADD CONSTRAINT `club_member_ibfk_2` FOREIGN KEY (`club_id`) REFERENCES `club`(`club_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
