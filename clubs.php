@@ -8,6 +8,8 @@
 	
 	<title>Clubs and Society</title>
 
+
+	
 	<!--Title Bar Icon-->
 	<link rel="icon" type="image/ico" href="src/assets/quest_logo.png">
 	
@@ -26,6 +28,8 @@
 
 
 </head>
+
+
 
 <body id="top">
 
@@ -366,9 +370,9 @@
 
 	
 	<div class="go-top">
-        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-arrow-up"></i></a>
     </div>
-
+	
 	<div class="footer">
 		<h4>Stay Connected</h4>
 		<div class="links">

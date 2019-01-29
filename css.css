@@ -30,7 +30,6 @@ body {
    padding: 0;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## links
  * ------------------------------------------------------------------- */
@@ -920,11 +919,11 @@ form,
    width: 5.4rem;
    line-height: 5.4rem;
    text-align: center;
-   background-image: url(../images/icons/icon-arrow-up.svg);
-   background-color: #000000;
+   background-image: url(src/assets/arrowup.png);
+   background-color: #A2A2A2;
    background-repeat: no-repeat;
    background-position: center center;
-   background-size: 10px 16px;
+   background-size: 16px 16px;
    color: rgba(255, 255, 255, 0.5);
    text-align: center;
    text-transform: uppercase;
