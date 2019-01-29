@@ -1,0 +1,4 @@
+ReCaptcha
+https://developer.salesforce.com/forums/?id=9060G000000IAi2QAG
+https://www.dreamincode.net/forums/topic/393734-enable-button-when-recaptcha/
+https://stackoverflow.com/questions/30018213/recaptcha-2-0-enable-submit-button-on-callback-if-recaptcha-successful
