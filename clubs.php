@@ -367,10 +367,9 @@
         </div>
 
     </section> <!-- s-content -->
-
 	
 	<div class="go-top">
-        <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-arrow-up"></i></a>
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
     </div>
 	
 	<div class="footer">
