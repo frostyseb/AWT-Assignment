@@ -54,6 +54,15 @@ body {
 	cursor:pointer;
 }
 
+.list-item a {
+	color:#000;
+}
+
+.list-item a:hover{
+	text-decoration:none;
+	color:#464646;
+}
+
 .list-item:hover{
 	background-color: lightskyblue;
 }
