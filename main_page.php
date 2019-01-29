@@ -164,7 +164,7 @@
 	echo "<div class='list'>";
 	
 	foreach($xml->club as $name) {
-		echo "<div class='list-item'><b>" . $name . "</b></div>";
+		echo "<div class='list-item'><b><a href='clubs.php'>" . $name . "</a></b></div>";
 	}
 	
 	echo "</div></div>";
