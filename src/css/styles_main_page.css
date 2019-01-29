@@ -54,11 +54,11 @@ body {
 	cursor:pointer;
 }
 
-.list-link a {
+.list-item a {
 	color:#000;
 }
 
-.list-link a:hover{
+.list-item a:hover{
 	text-decoration:none;
 	color:#464646;
 }

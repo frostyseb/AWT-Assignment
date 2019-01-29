@@ -167,73 +167,73 @@
 		
 
 		if ($name == 'Music Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Debate Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Care Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Innovation Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Photography Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Biotech Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'International Students Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Human Resource Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Student Representative Council') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Pharmacy Students Society') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Hindu Society') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Christian Society') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Sikh Society') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Chinese Society') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Muslim Society') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'International Commerce Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Cricket Club') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Badminton Club') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Futsal &amp; Football Club') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Basketball Club') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Gamers Club') {
-			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Indoor Club') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Outdoor Club') {
-			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</a></b></div>";
+			echo "<div class='list-item'><a href='clubs.php '><b>" . $name . "</b></a></div>";
 		}
 	}
 	
