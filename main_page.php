@@ -150,7 +150,7 @@
 		<h4>Check out the latest CCA activities or <br>events from <i class="fa fa-facebook-square" style="color:darkblue;"></i>
 			QIUP Facebook!</h4>
 		<div class="fb-page" data-href="https://www.facebook.com/QuestInternationalUniversityPerak/" data-tabs="timeline"
-		 data-width="500" data-height="1270" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+		 data-width="500" data-height="1230" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
 		 data-show-facepile="false">
 			<blockquote cite="https://www.facebook.com/QuestInternationalUniversityPerak/" class="fb-xfbml-parse-ignore">
 				<a href="https://www.facebook.com/QuestInternationalUniversityPerak/">Quest International University Perak (QIUP)</a>

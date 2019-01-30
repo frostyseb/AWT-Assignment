@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="src\css\styles_login.css" type="text/css">
 	
 	<!--Google font style-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Dosis|Exo" rel="stylesheet">
 	
 	<!--Google Recaptcha API-->
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
