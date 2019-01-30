@@ -2,8 +2,7 @@
     session_start();
 
     include_once "includes/Dbh.inc.php";
-    include_once "club.inc.php";
-    include_once "includes/club_member.inc.php";
+    include_once "includes/club.inc.php";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(isset($_POST["club"])){
