@@ -57,7 +57,7 @@
 
 
 		<form method="POST" onsubmit="return validateGooRe()">
-		  <div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4" data-callback="verifyCaptcha"></div>
+		  <center><div class="g-recaptcha" data-sitekey="6Le-P40UAAAAAC0hU6jBEIBT9nq0kHqD9PkB5PO4" data-callback="verifyCaptcha"></div></center>
 		  <br>
 		  <button type="submit" class="btn btn-outline-danger btn-block" id="gBtn"><i class="fab fa-google"></i> SIGN IN WITH GOOGLE</button>
 		</form>
