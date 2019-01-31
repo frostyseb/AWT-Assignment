@@ -37,6 +37,7 @@
 	$len = strlen($query);
 	
 	$flag = 0;
+	$count = 0;
 	
 	$xml = simplexml_load_file("clubs_societies.xml") or die("Error: Cannot create object");
 	
@@ -46,7 +47,12 @@
 		if (stristr($query, substr($name, 0, $len))) {
 			echo "<div class='result'><a href='clubs.php'>" . $name . "</a></div><br>";
 			$flag = 1;
+			$count++;
 		}
+	}
+	
+	if($count == 1){
+		echo "<br><br><br><br><br><br><br>";
 	}
 	
 	if($flag == 0){
