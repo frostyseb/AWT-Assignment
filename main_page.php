@@ -175,7 +175,7 @@
 		if ($name == 'Debate Club') {
 			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
-		if ($name == 'Care Club') {
+		if ($name == 'Q-Care Club') {
 			echo "<div class='list-item'><a href='clubs2.php '><b>" . $name . "</b></a></div>";
 		}
 		if ($name == 'Innovation Club') {
