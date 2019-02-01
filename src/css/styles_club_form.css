@@ -4,12 +4,13 @@ body {
 }
 
 #club_form {
-	margin-left:2em;
-	margin-right:2em;
 	line-height:3em;
+	width:70%;
+	margin:auto;
+	margin-bottom:1em;
 }
 
-label {
+#club_form label {
 	margin:1em;
 	margin-left:0;
 	font-size:1.5em;
@@ -23,3 +24,35 @@ label {
 	padding-right:2em;
 }
 
+#club_member label, #member_list label {
+	font-size:1.5em;
+	margin:0.5em;
+	margin-left:0;
+}
+
+.cmSubmit {
+	border:1px solid #B9B9B9;
+	border-radius:0.5em;
+	cursor:pointer;
+	padding:1em;
+}
+
+.container {
+	width:70%;
+	margin:auto;
+}
+
+#club_member select, #member_list select {
+	padding:0.3em;
+}
+
+
+
+hr {
+	border-color:#B9B9B9;
+	width:90%;
+}
+
+#member_list {
+	margin-bottom:2em;
+}
