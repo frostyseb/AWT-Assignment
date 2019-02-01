@@ -138,6 +138,8 @@
                 }
                 else{
                     $insert = $this->connect()->query($this->insertUser);
+                    $stmt = $this->connect()->prepare("UPDATE TABLE users SET gender=? WHERE oauth_id=?");
+                    $stmt->execute([" "]);
                     echo "No data in database";
                 }
 

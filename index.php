@@ -49,8 +49,8 @@
 			$clubFormData = array(
 				'uid'     => $_SESSION['id'],
 				'student_id'    => $_POST['student_id'],
-				'second_club'    => $_POST['second_club'],
-				'third_club'    => $_POST['third_club'],
+				'second_club'    => 'Club1',
+				'third_club'    => 'Club2',
 				'total_cca'   => $_POST['total_cca']
 			);
 
@@ -307,32 +307,16 @@ if($pageWasRefreshed ) {
 										</td>
 									</tr>
 									<tr>
-										<td>Second Club</td>
+										<td>Club</td>
 										<td class="table-col">
-											<div class="info-cca">
-												<?php echo $_SESSION['second_club']?>
-											</div>
-
-											<div class="input-group mb-3">
-												<input value="<?php echo $_SESSION['second_club']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
-												 name="second_club" id="second_club">
-												<div class="input-group-append">
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>Third Club</td>
-										<td class="table-col">
-											<div class="info-cca">
-												<?php echo $_SESSION['third_club']?>
-											</div>
-
-											<div class="input-group mb-3">
-												<input value="<?php echo $_SESSION['third_club']?>" type="text" class="form-control" placeholder="" aria-label="ID" aria-describedby="basic-addon2"
-												 name="third_club" id="third_club">
-												<div class="input-group-append">
-												</div>
+											<div class="">
+											<ol>
+												<?php 
+													foreach($_SESSION['club_name'] as $clubName){
+														echo "<li>".$clubName."</li>";
+													}
+												?>
+											</ol>
 											</div>
 										</td>
 									</tr>
