@@ -6,9 +6,6 @@
     include_once 'includes\club_member.inc.php';
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-       
-
         if(isset($_POST["club_member"])){
             $club_member = new ClubMember;
             $dataArray = array(
