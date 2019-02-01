@@ -55,7 +55,7 @@
             <span class="badge badge-info">11</span>
           </i>
           Disabled
-        </a> -->
+        </a> 
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
@@ -64,8 +64,8 @@
           </i>
           Disabled
         </a>
-      </li>
-    </ul>
+      </li> -->
+    </ul> 
     <form id="searchForm" autocomplete="off" onsubmit="return validation()" method="POST" name="searchForm" action="search.php">
       <div class="autocomplete" style="width:300px;">
         <input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)">

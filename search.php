@@ -37,6 +37,7 @@
 	$len = strlen($query);
 	
 	$flag = 0;
+	$count = 0;
 	
 	$xml = simplexml_load_file("clubs_societies.xml") or die("Error: Cannot create object");
 	
@@ -44,13 +45,132 @@
 	
 	foreach($xml->club as $name) {
 		if (stristr($query, substr($name, 0, $len))) {
-			echo "<div class='result'><a href='clubs.php'>" . $name . "</a></div><br>";
-			$flag = 1;
+			if ($name == 'Music Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Debate Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Q-Care Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Innovation Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Photography Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Biotech Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'International Students Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Human Resource Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Student Representative Council') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Pharmacy Students Society') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Hindu Society') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Christian Society') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Sikh Society') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Chinese Society') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Muslim Society') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'International Commerce Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Cricket Club') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Badminton Club') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Futsal &amp; Football Club') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Basketball Club') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Gamers Club') {
+				echo "<div class='result'><a href='clubs2.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Indoor Club') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+			if ($name == 'Outdoor Club') {
+				echo "<div class='result'><a href='clubs.php '>" . $name . "</a></div><br>";
+				$flag = 1;
+				$count++;
+			}
+
 		}
+	}
+	
+	if($count == 1){
+		echo "<br><br><br><br><br><br><br>";
 	}
 	
 	if($flag == 0){
 		echo "<div class='result'>No Result</div><br><br>";
+		echo "<br><br><br><br><br><br><br>";
 	}
 	
 	?>

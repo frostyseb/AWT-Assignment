@@ -106,11 +106,11 @@
     
                     <div class="entry__text">
                         <div class="entry__header">
-                            <h1 class="entry__title">Care Club</a></h1>    
+                            <h1 class="entry__title">Q-Care Club</a></h1>    
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Care club is brought up by all the medical students to spread the understanding of health and human body.
+                                Q-Care club is brought up by all the medical students to spread the understanding of health and human body.
                             </p>
                         </div>
                         <div class="entry__meta">

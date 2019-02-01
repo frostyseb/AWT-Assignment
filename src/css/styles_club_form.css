@@ -1,0 +1,25 @@
+body {
+	margin-top:8em;
+	font-family: 'KoHo', sans-serif;
+}
+
+#club_form {
+	margin-left:2em;
+	margin-right:2em;
+	line-height:3em;
+}
+
+label {
+	margin:1em;
+	margin-left:0;
+	font-size:1.5em;
+}
+
+#clubSubmit {
+	border:1px solid #B9B9B9;
+	border-radius:0.5em;
+	cursor:pointer;
+	padding-left:2em;
+	padding-right:2em;
+}
+
