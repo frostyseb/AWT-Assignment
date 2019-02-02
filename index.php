@@ -107,9 +107,6 @@ if($pageWasRefreshed ) {
 			<li class="nav-item">
 				<a class="nav-link" data-toggle="tab" href="#club">Club</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
-			</li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -307,7 +304,7 @@ if($pageWasRefreshed ) {
 										</td>
 									</tr>
 									<tr>
-										<td>Club</td>
+										<td>Second Club</td>
 										<td class="table-col">
 											<div class="">
 											<ol>
@@ -349,11 +346,6 @@ if($pageWasRefreshed ) {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="menu2" class="container tab-pane fade"><br>
-				<h3>Menu 2</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-					aperiam.</p>
 			</div>
 		</div>
 	</div>
