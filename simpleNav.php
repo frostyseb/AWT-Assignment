@@ -31,41 +31,22 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fa fa-envelope-o">
-            <span class="badge badge-danger">11</span>
-          </i>
-          Messages
+      <li class="nav-item active">
+        <a class="nav-link" href="club_form.php">
+          <i class="fa fa-cubes"></i>
+          Add C/S
+          <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">
-          <i class="fa fa-envelope-o">
-            <span class="badge badge-danger">11</span>
-          </i>
-          Disabled
+      <li class="nav-item active">
+        <a class="nav-link" href="club_member.php">
+          <i class="fa fa-plus-circle"></i>
+          Register
+          <span class="sr-only">(current)</span>
         </a>
       </li>
     </ul>
-    <ul class="navbar-nav ">
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fa fa-bell">
-            <span class="badge badge-info">11</span>
-          </i>
-          Disabled
-        </a> 
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fa fa-globe">
-            <span class="badge badge-success">11</span>
-          </i>
-          Disabled
-        </a>
-      </li> -->
-    </ul> 
+	
     <form id="searchForm" autocomplete="off" onsubmit="return validation()" method="POST" name="searchForm" action="search.php">
       <div class="autocomplete" style="width:300px;">
         <input id="myInput" type="text" name="clubs" placeholder="Search clubs or societies" onkeyup="displayHint(this.value)">
